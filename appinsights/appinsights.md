@@ -1,13 +1,27 @@
 # A full overview of Azure Application Insights
 
 # Intro
-
 According to [Microsoft](https://docs.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview#how-do-i-use-application-insights):
 
   Application Insights, a feature of Azure Monitor, is an extensible Application Performance Management (APM) service for developers and DevOps professionals. Use it to monitor your live applications. It will automatically detect performance anomalies, and includes powerful analytics tools to help you diagnose issues and to understand what users actually do with your app. It's designed to help you continuously improve performance and usability. It works for apps on a wide variety of platforms including .NET, Node.js and Java EE, hosted on-premises, hybrid, or any public cloud. It integrates with your DevOps process, and has connection points to a variety of development tools. It can monitor and analyze telemetry from mobile apps by integrating with Visual Studio App Center.
 
-# Getting Started
+# AppInsights Services
+These are some services that AppInsights provide:
+    * HTTP request rates, response times, and success rates
+    * Dependency (HTTP & SQL) call rates, response times, and success rates
+    * Exception traces from both server and client
+    * Diagnostic log traces
+    * Page view counts, user and session counts, browser load times, and exceptions
+    * AJAX call rates, response times, and success rates
+    * Server performance counters
+    * Custom client and server telemetry
+    * Segmentation by client location, browser version, OS version, server instance, custom dimensions, and more
+    * Availability tests
 
+Along with the preceding types, there are associated diagnostic and analytics tools available for alerting and monitoring with various different customizable metrics. With its own query language and customizable dashboards, Application Insights forms a good monitoring solution for .NET microservices.
+A brief overview of the ELK stack
+
+# Getting Started
 If developing for a .Net project that is supported by one of our platform specific packages, Web or Windows Apps, we strongly recommend to use one of those packages instead of this base library. If your project does not fall into one of those platforms you can use this library for any .Net code. This library should have no dependencies outside of the .Net framework. If you are building a Desktop or any other .Net project type this library will enable you to utilize Application Insights. More on SDK layering and extensibility later.
 Get an Instrumentation Key
 

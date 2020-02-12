@@ -1,7 +1,7 @@
 # Getting last modified software on Windows using PowerShell
 Getting the list of the last modified software on Windows is actually simple, if using PowerShell
 
-XXXXX
+<div class="subheader">Photo by Miti on <a href="[XXXX](https://unsplash.com/photos/MRb1aJIwCJs)">Unsplash</a></div>
 
 I like getting weird requests and resolving them with one line of code in Powershell. Powershell is indeed a very polished tool for working in the terminal in Windows.
 
@@ -17,8 +17,8 @@ Get-WmiObject -Class Win32_Product | Export-Csv installed.csv
 And how do I look for what was modified most recently in our machine?
 
 ## Get-ChildItem
-getting last modified files
 ```PowerShell
+# getting last modified files
 Get-ChildItem C:\ -rec | sort LastWriteTime | select -last 1000 | Export-Csv files.csv
 ```
 

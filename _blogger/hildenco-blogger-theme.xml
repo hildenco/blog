@@ -593,6 +593,7 @@ body.mobile  {
 .mobile .tabs-inner .PageList .widget-content .pagelist-arrow {
   border-$startSide: 1px solid $(tabs.border.color);
 }
+
 body {
     background-color: #ededed;
     background-image: repeating-linear-gradient(-45deg, #e5e5e5, #e5e5e5 1px, transparent 2px, transparent 7px);
@@ -827,17 +828,15 @@ br {
 .tip {
     display: inline-block;
     padding: 15px;
-    margin: 30px 0 10px 0;
+    margin: 10px 0;
     width: 92%;
     color: #2288bb;
-    border: 1px solid #2288bb;
     font-weight: 400;
-    border-radius: 5px;
     overflow: hidden;
     vertical-align: middle;
-    font-family: Georgia, Times, serif;
     font-size: 1.1rem;
-    font-style: italic;
+    background-color: #EFF6FE;
+    border-left: 3px solid #3E78A6 !important;
 }
 
 .tip:before {
@@ -851,22 +850,41 @@ br {
 .warning {
     display: inline-block;
     padding: 15px;
-    margin: 30px 0 10px 0;
+    margin: 10px 0;
     width: 92%;
     color: #FF7900;
-    border: 1px solid #FF7900;
     font-weight: 400;
-    border-radius: 5px;
     overflow: hidden;
     vertical-align: middle;
-    font-family: Georgia, Times, serif;
     font-size: 1.1rem;
-    font-style: italic;
+    background-color: #FFF0EA;
+    border-left: 3px solid #E86D0C !important;
 }
-
 
 .warning:before {
     content: 'Warning: ';
+    color: #FF7900;
+    font-size: 20px;
+    padding: 3px 0;
+    font-weight: 600;
+}
+
+.danger{
+    display: inline-block;
+    padding: 15px;
+    margin: 10px 0;
+    width: 92%;
+    color: #FF7900;
+    font-weight: 400;
+    overflow: hidden;
+    vertical-align: middle;
+    font-size: 1.1rem;
+    background-color: #FFE1EB;
+    border-left: 3px solid #FF0008!important;
+}
+
+.danger:before {
+    content: 'Danger: ';
     color: #FF7900;
     font-size: 20px;
     padding: 3px 0;
@@ -883,7 +901,9 @@ br {
 
 .PopularPosts .widget-content ul li{
    padding: 2px;
-}.subheader {
+}
+
+.subheader {
    font-family: Georgia, Times, serif;
    font-size: 1.2;
    font-style: italic;

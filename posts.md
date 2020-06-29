@@ -1,13 +1,14 @@
 # blog
 
-<div class="code">
-<div class="tip">
-<div class="warning">
+<div class="code"></div>
+<div class="tip"></div>
+<div class="warning"></div>
+<div class="subheader"></div>
 
-<div class="subheader">Photo by Christopher Gower on <a href="https://unsplash.com/photos/m_HRfLhgABo">Unsplash</a><br /><br /></div>
+<div class="subheader">Photo by XXXXXXXXXXX on <a href="https://unsplash.com/photos/XXXXXXXXXXX">Unsplash</a><br /><br /></div>
 
 
-Posts
+# Posts
 
 Why use CentOS https://blog.hildenco.com/2020/06/why-use-centos.html
 How to create a CentOS Stream VM on Hyper-V https://blog.hildenco.com/2020/06/how-to-create-centos-stream-vm-on-hyper.html
@@ -24,7 +25,6 @@ How to suppress Application Insights telemetry https://blog.hildenco.com/2020/03
 Adding Application Insights telemetry to your ASP.NET Core website https://blog.hildenco.com/2020/03/adding-application-insights-telemetry.html
 Monitor ASP.NET applications using Application Insights and Azure Alerts https://blog.hildenco.com/2020/04/monitor-aspnet-applications-using.html
 How to profile ASP.NET apps using Application Insights https://blog.hildenco.com/2020/04/how-to-profile-aspnet-apps-using.html
-Host ASP.NET Core in Docker containers https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/docker/
 Installing Alpine Linux on Microsoft Hyper-V https://blog.hildenco.com/2020/05/installing-alpine-linux-on-microsoft.html
 Running Alpine Linux as a desktop OS https://blog.hildenco.com/2020/05/running-alpine-linux-as-desktop-os.html
 How to Import CSVs with .NET Core and C# https://blog.hildenco.com/2018/03/importing-csvs-super-easily-with-net.html

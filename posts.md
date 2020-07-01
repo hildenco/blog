@@ -10,11 +10,14 @@
 
 # Posts
 
-Why use CentOS https://blog.hildenco.com/2020/06/why-use-centos.html
+How to create a CentOS VM on Azure https://blog.hildenco.com/2020/07/how-to-create-centos-vm-on-azure.html
 How to create a CentOS Stream VM on Hyper-V https://blog.hildenco.com/2020/06/how-to-create-centos-stream-vm-on-hyper.html
+Why use CentOS https://blog.hildenco.com/2020/06/why-use-centos.html
 Why use .NET Core https://blog.hildenco.com/2018/03/exploring-net-core.html
-How to Build and Run ASP.NET Core on Linux https://blog.hildenco.com/2018/04/building-and-running-aspnet-core-apps.html
 Configuration in .NET Core console applications https://blog.hildenco.com/2020/05/configuration-in-net-core-console.html
+Definition of Ready https://blog.hildenco.com/2019/10/definition-of-ready.html
+Tips for passing the PSD exam https://blog.hildenco.com/2018/10/tips-for-passing-psd-exam.html
+How to Build and Run ASP.NET Core on Linux https://blog.hildenco.com/2018/04/building-and-running-aspnet-core-apps.html
 Why use Fedora Linux https://blog.hildenco.com/2018/11/thank-you-fedora.html
 How I fell in love with i3 https://blog.hildenco.com/2019/08/how-i-fell-in-love-with-i3.html
 Countdown to .NET 5 https://blog.hildenco.com/2020/01/countdown-to-net-5.html
@@ -33,3 +36,15 @@ ThrowIf - Throwing exceptions elegantly in .NET with generics and C# https://blo
 Creating a MassTransit client/server application using RabbitMQ, .NET Core and Linux https://blog.hildenco.com/2018/08/creating-masstransit-clientserver.html
 Exploring MassTransit InMemory Scheduled Messaging using RabbitMQ and .NET Core https://blog.hildenco.com/2018/08/exploring-masstransit-inmemory.html
 MassTransit, a real alternative to NServiceBus? https://blog.hildenco.com/2018/08/masstransit-real-alternative-to.html
+How can you become a FOSS / Open-Source Contributor https://blog.hildenco.com/2017/11/how-can-you-become-foss-contributor.html
+How and why use stronger passwords https://blog.hildenco.com/2017/11/security-tips-using-stronger-passwords.html
+A simple introduction to RavenDB https://blog.hildenco.com/2018/05/a-simple-introduction-to-ravendb.html
+An in depth review of the RavenDB Cloud https://blog.hildenco.com/2019/12/an-in-depth-review-of-ravendb-cloud.html
+Testing JavaScript on ASP.NET Core Applications https://blog.hildenco.com/2018/04/testing-javascript-on-aspnet-core.html
+
+# Labels
+https://blog.hildenco.com/search/label/.Net
+https://blog.hildenco.com/search/label/.Net%20Core
+https://blog.hildenco.com/search/label/Asp.Net
+https://blog.hildenco.com/search/label/C%23
+https://blog.hildenco.com/search/label/Security

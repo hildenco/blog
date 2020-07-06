@@ -5,11 +5,10 @@
 <div class="warning"></div>
 <div class="subheader"></div>
 
-<div class="subheader">Photo by XXXXXXXXXXX on <a href="https://unsplash.com/photos/XXXXXXXXXXX">Unsplash</a><br /><br /></div>
-
+<div class="subheader">Photo by XXXXX on <a href="https://unsplash.com/photos/XXXXX">Unsplash</a><br /><br /></div>
 
 # Posts
-
+20 tips to manage Linux VMs on Azure https://blog.hildenco.com/2020/07/20-tips-to-manage-linux-vms-on-azure.html
 How to create a CentOS VM on Azure https://blog.hildenco.com/2020/07/how-to-create-centos-vm-on-azure.html
 How to create a CentOS Stream VM on Hyper-V https://blog.hildenco.com/2020/06/how-to-create-centos-stream-vm-on-hyper.html
 Why use CentOS https://blog.hildenco.com/2020/06/why-use-centos.html

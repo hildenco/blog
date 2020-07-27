@@ -1,5 +1,4 @@
 # blog
-
 <div class="code"></div>
 <div class="tip"></div>
 <div class="warning"></div>
@@ -8,6 +7,8 @@
 <div class="subheader">Photo by XXXXX on <a href="https://unsplash.com/photos/XXXXX">Unsplash</a><br /><br /></div>
 
 # Posts
+Send emails from ASP.NET Core websites using SendGrid and Azure  https://blog.hildenco.com/2020/07/send-emails-from-aspnet-core-websites.html
+Hosting NuGet packages on GitHub https://blog.hildenco.com/2020/07/hosting-nuget-packages-on-github.html
 20 tips to manage Linux VMs on Azure https://blog.hildenco.com/2020/07/20-tips-to-manage-linux-vms-on-azure.html
 How to create a CentOS VM on Azure https://blog.hildenco.com/2020/07/how-to-create-centos-vm-on-azure.html
 How to create a CentOS Stream VM on Hyper-V https://blog.hildenco.com/2020/06/how-to-create-centos-stream-vm-on-hyper.html

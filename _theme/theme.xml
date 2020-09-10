@@ -675,7 +675,7 @@ body .navbar{
 	padding: 0;
 }
 
-blockquote.tr_bq {
+blockquote {
    font-style: italic;
    border-left: 3px solid #2288bb !important;
    padding-left: 20px;
@@ -755,6 +755,50 @@ div.PopularPosts h2 {
    font-size: 12px;
 }
 
+.mobile div#FeaturedPost1 {
+  padding: 10px;
+}
+
+.mobile #blog-pager {
+  display: none;
+}
+
+.mobile #HTML3 {
+  padding: 0 10px;
+}
+
+.mobile #Label1 {
+  padding: 10px;
+}
+
+.mobile #Label2 {
+  padding: 10px;
+}
+
+.mobile #Label1 h2 {
+  font-size: 1.8em !important;
+}
+
+.mobile #PopularPosts1, .mobile #PopularPosts2 {
+  padding: 10px;
+}
+
+.mobile .item-thumbnail {
+    float: left;
+    margin-right: 10px;
+}
+
+.mobile .item-thumbnail img {
+    margin: 0px;
+    max-height: 60px;
+}
+
+#FeaturedPost1 h2 {
+  font-size: 1.8em;
+  margin: 10px 0 0 0;
+  padding: 0;
+}
+
 #FeaturedPost1 {
   border-bottom: 1px solid #dddddd;
   padding: 40px 0 80px 0;
@@ -769,7 +813,7 @@ div.PopularPosts h2 {
 
 
 #FeaturedPost1 div.post-summary h3 {
-  font-size: 2em;
+  font-size: 1.5em;
   padding: 0;
   margin: 0;
 }
@@ -786,10 +830,12 @@ div.PopularPosts h2 {
 
 #FeaturedPost1 img.image {
   width: 100%;
-  max-width: 60%;
+  max-width: 100%;
   display: block;
   margin: 0 auto;
-}.post-body {
+}
+
+.post-body {
    line-height: 1.8;
    letter-spacing: -0.02em;
    color: #444;
@@ -1185,7 +1231,25 @@ head.appendChild(script);
     <div class='fauxborder-left tabs-fauxborder-left'>
     <div class='fauxborder-right tabs-fauxborder-right'/>
     <div class='region-inner tabs-inner'>
-      <b:section class='tabs' id='crosscol' maxwidgets='1' name='Cross-Column' showaddelement='yes'/>
+      <b:section class='tabs' id='crosscol' maxwidgets='1' name='Cross-Column' showaddelement='yes'>
+        <b:widget id='AdSense3' locked='false' title='' type='AdSense'>
+          <b:widget-settings>
+            <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
+            <b:widget-setting name='style.textcolor'>#333333</b:widget-setting>
+            <b:widget-setting name='style.layout'>1x1</b:widget-setting>
+            <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
+            <b:widget-setting name='style.urlcolor'>#666666</b:widget-setting>
+            <b:widget-setting name='style.linkcolor'>#2288bb</b:widget-setting>
+            <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
+          </b:widget-settings>
+          <b:includable id='main'>
+  <div class='widget-content'>
+    <data:adCode/>
+    <b:include name='quickedit'/>
+  </div>
+</b:includable>
+        </b:widget>
+      </b:section>
       <b:section class='tabs' id='crosscol-overflow' name='Cross-Column 2' showaddelement='no'/>
     </div>
     </div>
@@ -1265,7 +1329,7 @@ head.appendChild(script);
               <b:widget-settings>
                 <b:widget-setting name='showDateHeader'>true</b:widget-setting>
                 <b:widget-setting name='style.textcolor'>#333333</b:widget-setting>
-                <b:widget-setting name='showShareButtons'>false</b:widget-setting>
+                <b:widget-setting name='showShareButtons'>true</b:widget-setting>
                 <b:widget-setting name='showCommentLink'>false</b:widget-setting>
                 <b:widget-setting name='style.urlcolor'>#666666</b:widget-setting>
                 <b:widget-setting name='showAuthor'>true</b:widget-setting>
@@ -1327,39 +1391,8 @@ head.appendChild(script);
 
   <b:include cond='data:top.showPlusOne' name='googlePlusBootstrap'/>
 </b:includable>
-              <b:includable id='backlinkDeleteIcon' var='backlink'>
-  <span expr:class='&quot;item-control &quot; + data:backlink.adminClass'>
-    <a expr:href='data:backlink.deleteUrl' expr:title='data:top.deleteBacklinkMsg'>
-      <img src='https://resources.blogblog.com/img/icon_delete13.gif'/>
-    </a>
-  </span>
-</b:includable>
-              <b:includable id='backlinks' var='post'>
-  <a name='links'/><h4><data:post.backlinksLabel/></h4>
-  <b:if cond='data:post.numBacklinks != 0'>
-    <dl class='comments-block' id='comments-block'>
-      <b:loop values='data:post.backlinks' var='backlink'>
-        <div class='collapsed-backlink backlink-control'>
-          <dt class='comment-title'>
-            <span class='backlink-toggle-zippy'>&#160;</span>
-            <a expr:href='data:backlink.url' rel='nofollow'><data:backlink.title/></a>
-            <b:include data='backlink' name='backlinkDeleteIcon'/>
-          </dt>
-          <dd class='comment-body collapseable'>
-            <data:backlink.snippet/>
-          </dd>
-          <dd class='comment-footer collapseable'>
-            <span class='comment-author'><data:post.authorLabel/> <data:backlink.author/></span>
-            <span class='comment-timestamp'><data:post.timestampLabel/> <data:backlink.timestamp/></span>
-          </dd>
-        </div>
-      </b:loop>
-    </dl>
-  </b:if>
-  <p class='comment-footer'>
-    <a class='comment-link' expr:href='data:post.createLinkUrl' expr:id='data:widget.instanceId + &quot;_backlinks-create-link&quot;' target='_blank'><data:post.createLinkLabel/></a>
-  </p>
-</b:includable>
+              <b:includable id='backlinkDeleteIcon' var='backlink'/>
+              <b:includable id='backlinks' var='post'/>
               <b:includable id='comment-form' var='post'>
   <div class='comment-form'>
     <a name='comment-form'/>
@@ -1512,11 +1545,6 @@ head.appendChild(script);
       </div>
     </b:if>
 
-    <div id='backlinks-container'>
-    <div expr:id='data:widget.instanceId + &quot;_backlinks-container&quot;'>
-       <b:include cond='data:post.showBacklinks' data='post' name='backlinks'/>
-    </div>
-    </div>
   </div>
 </b:includable>
               <b:includable id='feedLinks'>
@@ -2170,9 +2198,9 @@ head.appendChild(script);
   </div>
 </b:includable>
             </b:widget>
-            <b:widget id='HTML3' locked='false' title='' type='HTML'>
+            <b:widget id='HTML3' locked='false' mobile='yes' title='' type='HTML'>
               <b:widget-settings>
-                <b:widget-setting name='content'>&lt;div class=&quot;subheader&quot;&gt;Do you have any comment or suggestion about this post? Please contact me &lt;a href=&quot;https://twitter.com/BrunoHilden&quot;&gt;@BrunoHilden&lt;/a&gt;
+                <b:widget-setting name='content'>&lt;div class=&quot;subheader&quot;&gt;Any comment or suggestion about this post? Please DM me on Twitter at &lt;a href=&quot;https://twitter.com/BrunoHilden&quot;&gt;@BrunoHilden&lt;/a&gt;
 &lt;/div&gt;</b:widget-setting>
               </b:widget-settings>
               <b:includable id='main'>
@@ -2249,7 +2277,7 @@ head.appendChild(script);
       </macro:include>
       <!-- outside of the include in order to lock Attribution widget -->
       <b:section class='foot' id='footer-3' name='Footer' showaddelement='no'>
-        <b:widget id='Attribution1' locked='false' title='' type='Attribution'>
+        <b:widget id='Attribution1' locked='false' mobile='yes' title='' type='Attribution'>
           <b:widget-settings>
             <b:widget-setting name='copyright'>Copyright &#169; hildenco.com</b:widget-setting>
           </b:widget-settings>
@@ -2331,6 +2359,15 @@ head.appendChild(script);
 
 <b:section-contents id='footer-1'>
   <b:widget id='AdSense1' locked='false' title='' type='AdSense'>
+    <b:widget-settings>
+      <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
+      <b:widget-setting name='style.textcolor'>#333333</b:widget-setting>
+      <b:widget-setting name='style.layout'>1x1</b:widget-setting>
+      <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
+      <b:widget-setting name='style.urlcolor'>#2288bb</b:widget-setting>
+      <b:widget-setting name='style.linkcolor'>#222222</b:widget-setting>
+      <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
+    </b:widget-settings>
     <b:includable id='main'>
   <div class='widget-content'>
     <data:adCode/>
@@ -2338,7 +2375,7 @@ head.appendChild(script);
   </div>
 </b:includable>
   </b:widget>
-  <b:widget id='FeaturedPost1' locked='false' title='Featured this Week' type='FeaturedPost'>
+  <b:widget id='FeaturedPost1' locked='false' mobile='yes' title='Featured this Week' type='FeaturedPost'>
     <b:widget-settings>
       <b:widget-setting name='showSnippet'>true</b:widget-setting>
       <b:widget-setting name='showPostTitle'>true</b:widget-setting>
@@ -2378,7 +2415,7 @@ head.appendChild(script);
 </b:includable>
   </b:widget>
 </b:section-contents><b:section-contents id='footer-2-1'>
-  <b:widget id='PopularPosts1' locked='false' title='Most Read' type='PopularPosts'>
+  <b:widget id='PopularPosts1' locked='false' mobile='yes' title='Most Read' type='PopularPosts'>
     <b:widget-settings>
       <b:widget-setting name='numItemsToShow'>5</b:widget-setting>
       <b:widget-setting name='showThumbnails'>true</b:widget-setting>
@@ -2428,40 +2465,34 @@ head.appendChild(script);
   </b:widget>
   <b:widget id='HTML1' locked='false' title='' type='HTML'>
     <b:widget-settings>
-      <b:widget-setting name='content'>&lt;h1&gt;Who am I?&lt;/h1&gt;
+      <b:widget-setting name='content'>&lt;h2&gt;Who am I?&lt;/h2&gt;
 &lt;div class=&quot;about-me&quot;&gt;
 &lt;strong&gt;Bruno Hildenbrand&lt;/strong&gt;&lt;br /&gt;
 Software Engineer, 
-&lt;a href=&quot;http://freeopensourcesoftware.org/index.php/Main_Page&quot; target=&quot;_blank&quot;&gt;FOSS&lt;/a&gt; Supporter and happy &lt;a href=&quot;https://blog.hildenco.com/2018/11/thank-you-fedora.html&quot; target=&quot;_blank&quot;&gt;Fedora Linux&lt;/a&gt; user.&lt;br /&gt;
+&lt;a href=&quot;https://github.com/hd9&quot; target=&quot;_blank&quot;&gt;
+open-source enthusiast&lt;/a&gt;, happy
+&lt;a href=&quot;https://blog.hildenco.com/2018/11/thank-you-fedora.html&quot; target=&quot;_blank&quot;&gt;Fedora Linux&lt;/a&gt; and &lt;a href=&quot;https://blog.hildenco.com/2019/08/how-i-fell-in-love-with-i3.html&quot; target=&quot;_blank&quot;&gt;i3wm user&lt;/a&gt;. &#10084; &lt;a href=&quot;https://golang.org/&quot; target=&quot;_blank&quot;&gt;Go&lt;/a&gt; and &lt;a href=&quot;https://vim.org/&quot; target=&quot;_blank&quot;&gt;Vim&lt;/a&gt;&lt;br /&gt;
+
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&quot; /&gt;
 
 &lt;div style=&quot;contacts&quot;&gt;
 
-&lt;div&gt;
-
-    &lt;a href=&quot;https://www.hildenco.com&quot; itemprop=&quot;url&quot;&gt;
-        &lt;svg class=&quot;svg-inline--fa fa-link fa-w-16 fa-fw&quot; aria-hidden=&quot;true&quot; data-prefix=&quot;fas&quot; data-icon=&quot;link&quot; role=&quot;img&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewbox=&quot;0 0 512 512&quot; data-fa-i2svg=&quot;&quot;&gt;&lt;path fill=&quot;currentColor&quot; d=&quot;M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;            
+    &lt;a href=&quot;https://www.hildenco.com&quot;&gt;
+        &lt;i class=&quot;fa fa-server&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+    &lt;/a&gt;
+    &lt;a href=&quot;https://twitter.com/brunohilden&quot;&gt;
+        &lt;i class=&quot;fa fa-twitter&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+    &lt;/a&gt;
+    &lt;a href=&quot;https://github.com/hd9&quot;&gt;
+        &lt;i class=&quot;fa fa-github&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+    &lt;/a&gt;
+    &lt;a href=&quot;https://www.linkedin.com/in/brunohildenbrand/&quot;&gt;
+        &lt;i class=&quot;fa fa-linkedin&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
     &lt;/a&gt;
 
-&lt;!--
-    &lt;a href=&quot;mailto:&quot;&gt;
-        
-        &lt;svg class=&quot;svg-inline--fa fa-envelope-square fa-w-14 fa-fw&quot; aria-hidden=&quot;true&quot; data-prefix=&quot;fas&quot; data-icon=&quot;envelope-square&quot; role=&quot;img&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewbox=&quot;0 0 448 512&quot; data-fa-i2svg=&quot;&quot;&gt;&lt;path fill=&quot;currentColor&quot; d=&quot;M400 32H48C21.49 32 0 53.49 0 80v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V80c0-26.51-21.49-48-48-48zM178.117 262.104C87.429 196.287 88.353 196.121 64 177.167V152c0-13.255 10.745-24 24-24h272c13.255 0 24 10.745 24 24v25.167c-24.371 18.969-23.434 19.124-114.117 84.938-10.5 7.655-31.392 26.12-45.883 25.894-14.503.218-35.367-18.227-45.883-25.895zM384 217.775V360c0 13.255-10.745 24-24 24H88c-13.255 0-24-10.745-24-24V217.775c13.958 10.794 33.329 25.236 95.303 70.214 14.162 10.341 37.975 32.145 64.694 32.01 26.887.134 51.037-22.041 64.72-32.025 61.958-44.965 81.325-59.406 95.283-70.199z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
-    &lt;/a&gt;
-
---&gt;
-
-    &lt;a href=&quot;https://twitter.com/brunohilden&quot; itemprop=&quot;sameAs&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;
-        &lt;svg class=&quot;svg-inline--fa fa-twitter-square fa-w-14 fa-fw&quot; aria-hidden=&quot;true&quot; data-prefix=&quot;fab&quot; data-icon=&quot;twitter-square&quot; role=&quot;img&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewbox=&quot;0 0 448 512&quot; data-fa-i2svg=&quot;&quot;&gt;&lt;path fill=&quot;currentColor&quot; d=&quot;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-48.9 158.8c.2 2.8.2 5.7.2 8.5 0 86.7-66 186.6-186.6 186.6-37.2 0-71.7-10.8-100.7-29.4 5.3.6 10.4.8 15.8.8 30.7 0 58.9-10.4 81.4-28-28.8-.6-53-19.5-61.3-45.5 10.1 1.5 19.2 1.5 29.6-1.2-30-6.1-52.5-32.5-52.5-64.4v-.8c8.7 4.9 18.9 7.9 29.6 8.3a65.447 65.447 0 0 1-29.2-54.6c0-12.2 3.2-23.4 8.9-33.1 32.3 39.8 80.8 65.8 135.2 68.6-9.3-44.5 24-80.6 64-80.6 18.9 0 35.9 7.9 47.9 20.7 14.8-2.8 29-8.3 41.6-15.8-4.9 15.2-15.2 28-28.8 36.1 13.2-1.4 26-5.1 37.8-10.2-8.9 13.1-20.1 24.7-32.9 34z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
-    &lt;/a&gt;
-
-    &lt;a href=&quot;https://github.com/hd9&quot; itemprop=&quot;sameAs&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;
-        &lt;svg class=&quot;svg-inline--fa fa-github fa-w-16 fa-fw&quot; aria-hidden=&quot;true&quot; data-prefix=&quot;fab&quot; data-icon=&quot;github&quot; role=&quot;img&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewbox=&quot;0 0 496 512&quot; data-fa-i2svg=&quot;&quot;&gt;&lt;path fill=&quot;currentColor&quot; d=&quot;M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
-    &lt;/a&gt;
-    
 &lt;/div&gt;
 
-
-&lt;/div&gt;&lt;/div&gt;</b:widget-setting>
+&lt;/div&gt;</b:widget-setting>
     </b:widget-settings>
     <b:includable id='main'>
   <!-- only display title if it's non-empty -->
@@ -2477,7 +2508,8 @@ Software Engineer,
   </b:widget>
   <b:widget id='HTML2' locked='false' title='' type='HTML'>
     <b:widget-settings>
-      <b:widget-setting name='content'><![CDATA[<a class="twitter-timeline" data-width="500" data-height="300" data-tweet-limit="3" data-chrome="noheader nofooter noborders" href="https://twitter.com/BrunoHilden?ref_src=twsrc%5Etfw">@BrunoHilden</a> <script async="async" src="https://platform.twitter.com/widgets.js" charset="utf-8" ></script>]]></b:widget-setting>
+      <b:widget-setting name='content'>&lt;h2&gt;Recent Tweets&lt;/h2&gt;
+&lt;a class=&quot;twitter-timeline&quot; data-width=&quot;500&quot; data-height=&quot;300&quot; data-tweet-limit=&quot;2&quot; data-chrome=&quot;noheader nofooter noborders&quot; href=&quot;https://twitter.com/BrunoHilden?ref_src=twsrc%5Etfw&quot;&gt;@BrunoHilden&lt;/a&gt; &lt;script async=&quot;async&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot; &gt;&lt;/script&gt;</b:widget-setting>
     </b:widget-settings>
     <b:includable id='main'>
   <!-- only display title if it's non-empty -->
@@ -2492,7 +2524,7 @@ Software Engineer,
 </b:includable>
   </b:widget>
 </b:section-contents><b:section-contents id='footer-2-2'>
-  <b:widget id='PopularPosts2' locked='false' title='Most Recently Viewed' type='PopularPosts'>
+  <b:widget id='PopularPosts2' locked='false' mobile='yes' title='Most Recently Viewed' type='PopularPosts'>
     <b:widget-settings>
       <b:widget-setting name='numItemsToShow'>5</b:widget-setting>
       <b:widget-setting name='showThumbnails'>true</b:widget-setting>
@@ -2570,13 +2602,13 @@ Software Engineer,
     <b:include name='quickedit'/>
   </b:includable>
   </b:widget>
-  <b:widget id='Label2' locked='false' title='Other Topics' type='Label'>
+  <b:widget id='Label2' locked='false' mobile='yes' title='Other Topics' type='Label'>
     <b:widget-settings>
       <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
       <b:widget-setting name='display'>CLOUD</b:widget-setting>
-      <b:widget-setting name='selectedLabelsList'>.Net,.Net Core,Architecture,Asp.Net,Azure,Best Practices,Blogger,Books,Bootstrap,C#,Career,Certifications,Cloud,Data Leaks,Databases,Design Patterns,Development,Docker,Education,FOSS,Fedora,Firefox,GitHub,Google,Hacks,IoT,Javascript,Linux,MVC,MassTransit,Microservices,Microsoft,NServiceBus,NoSql,Open Source,Powershell,Privacy,QA,RavenDB,Red Hat,Reference,Security,Selenium,Series,Startups,Vue.js,Web,backend,front-end,jQuery</b:widget-setting>
+      <b:widget-setting name='selectedLabelsList'>.Net,.Net Core,AWS,AppInsights,Architecture,Asp.Net,Azure,Best Practices,Blogger,Books,Bootstrap,C#,Career,Certifications,Clean Code,Cloud,Containers,Data Leaks,Databases,Dependency Injection,Design Patterns,Development,Docker,Education,FOSS,Fedora,Firefox,GitHub,Golang,Google,Google Cloud,Hacks,IoT,Javascript,Kubernetes,Linux,MVC,MassTransit,Microservices,Microsoft,MongoDB,NServiceBus,NoSql,Open Source,Powershell,Privacy,QA,RabbitMQ,Raspberry Pi,RavenDB,Red Hat,Redis,Reference,Security,Selenium,Series,Startups,Ubuntu,Vim,Vue.js,WSL,Web,Windows,backend,centOS,devops,front-end,i3,jQuery</b:widget-setting>
       <b:widget-setting name='showType'>USER_SELECTED</b:widget-setting>
-      <b:widget-setting name='showFreqNumbers'>false</b:widget-setting>
+      <b:widget-setting name='showFreqNumbers'>true</b:widget-setting>
     </b:widget-settings>
     <b:includable id='main'>
   <b:if cond='data:title != &quot;&quot;'>
@@ -2616,66 +2648,16 @@ Software Engineer,
   </div>
 </b:includable>
   </b:widget>
-  <b:widget id='Subscribe1' locked='false' title='Subscribe' type='Subscribe'>
-    <b:includable id='main'>
-  <div style='white-space:nowrap'>
-    <b:if cond='data:title != &quot;&quot;'>
-      <h2 class='title'><data:title/></h2>
-    </b:if>
-    <div class='widget-content'>
-      <b:loop values='data:feeds' var='feed'>
-        <div expr:class='&quot;subscribe-wrapper subscribe-type-&quot; + data:feed.type'>
-
-          <div expr:class='&quot;subscribe expanded subscribe-type-&quot; + data:feed.type' expr:id='&quot;SW_READER_LIST_&quot; + data:widgetId + data:feed.type' style='display:none;'>
-            <div class='top'>
-              <span class='inner' expr:onclick='&quot;return(_SW_toggleReaderList(event, \&quot;&quot; + data:widgetId +data:feed.type + &quot;\&quot;));&quot;'>
-                <img class='subscribe-dropdown-arrow' expr:src='data:arrowDropdownImg'/>
-                <img align='absmiddle' alt='' border='0' class='feed-icon' expr:src='data:feedIconImg'/>
-                <data:feed.title/>
-              </span>
-
-              <div class='feed-reader-links'>
-                <a class='feed-reader-link' expr:href='&quot;https://www.netvibes.com/subscribe.php?url=&quot; + data:feed.encodedUrl' target='_blank'>
-                  <img expr:src='data:imagePathBase + &quot;subscribe-netvibes.png&quot;'/>
-                </a>
-                <a class='feed-reader-link' expr:href='&quot;https://add.my.yahoo.com/content?url=&quot; + data:feed.encodedUrl' target='_blank'>
-                  <img expr:src='data:imagePathBase + &quot;subscribe-yahoo.png&quot;'/>
-                </a>
-                <a class='feed-reader-link' expr:href='data:feed.url' target='_blank'>
-                  <img align='absmiddle' class='feed-icon' expr:src='data:feedIconImg'/>
-                  Atom
-                </a>
-              </div>
-
-            </div>
-            <div class='bottom'/>
-          </div>
-
-          <div class='subscribe' expr:id='&quot;SW_READER_LIST_CLOSED_&quot; + data:widgetId +data:feed.type' expr:onclick='&quot;return(_SW_toggleReaderList(event, \&quot;&quot; + data:widgetId +data:feed.type + &quot;\&quot;));&quot;'>
-            <div class='top'>
-               <span class='inner'>
-                 <img class='subscribe-dropdown-arrow' expr:src='data:arrowDropdownImg'/>
-                 <span expr:onclick='&quot;return(_SW_toggleReaderList(event, \&quot;&quot; + data:widgetId +data:feed.type + &quot;\&quot;));&quot;'>
-                   <img align='absmiddle' alt='' border='0' class='feed-icon' expr:src='data:feedIconImg'/>
-                   <data:feed.title/>
-                 </span>
-               </span>
-             </div>
-            <div class='bottom'/>
-          </div>
-
-        </div>
-      </b:loop>
-
-      <div style='clear:both'/>
-
-    </div>
-  </div>
-
-  <b:include name='quickedit'/>
-</b:includable>
-  </b:widget>
   <b:widget id='AdSense2' locked='false' title='' type='AdSense'>
+    <b:widget-settings>
+      <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
+      <b:widget-setting name='style.textcolor'>#333333</b:widget-setting>
+      <b:widget-setting name='style.layout'>1x1</b:widget-setting>
+      <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
+      <b:widget-setting name='style.urlcolor'>#2288bb</b:widget-setting>
+      <b:widget-setting name='style.linkcolor'>#222222</b:widget-setting>
+      <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
+    </b:widget-settings>
     <b:includable id='main'>
   <div class='widget-content'>
     <data:adCode/>

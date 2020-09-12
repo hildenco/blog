@@ -10,16 +10,18 @@
       gtag(&#39;config&#39;, &#39;UA-1813817-2&#39;);
     </script>
 	<script async='async' defer='defer' src='https://platform.linkedin.com/badges/js/profile.js' type='text/javascript'/>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'/>
+    <script async='async' src='https://platform-api.sharethis.com/js/sharethis.js#property=5f5af0200658220012f2d83c&amp;product=sop' type='text/javascript'/>
     <meta expr:content='data:blog.isMobile         ? &quot;width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0&quot;         : &quot;width=1100&quot;' name='viewport'/>
     <meta content='24E7411151F52A2EE8C78855433F52B7' name='msvalidate.01'/>
     <b:include data='blog' name='all-head-content'/>
     <b:if cond='data:blog.pageType == &quot;archive&quot;'>
     	<meta content='NOINDEX' name='ROBOTS'/>
-		<title><data:blog.title/> | HildenCo</title>
+		<title><data:blog.title/> | <data:blog.title/></title>
 	<b:elseif cond='data:blog.pageType == &quot;index&quot;'/>
-		<title><data:blog.title/> | HildenCo</title>
+		<title><data:blog.title/> | <data:blog.title/></title>
 	<b:else/>
-		<title><data:blog.pageName/> | HildenCo</title>
+		<title><data:blog.pageName/> | <data:blog.title/></title>
     </b:if>
     <b:skin><![CDATA[/*
 -----------------------------------------------
@@ -619,23 +621,30 @@ h3,h4,h5{
    font-face: 'GFS Didot';
 }
 
-img {
-   margin: 20px 0;
-}
-
 body .navbar{
    height:0px;
 }
 
-#header-inner {
-   height: 60px;
-   font-family: 'Merriweather', Georgia, serif;
+#header-inner .titlewrapper{
+  padding:0;
+  margin:0;
 }
 
 #header-inner div.title{
-    font: normal normal 1.7em Open Sans;
-    color: #06496b;
-    text-shadow: 0 0 0 rgba(0, 0, 0, .2);
+  font: normal normal 2.2rem Roboto, Lato, Open Sans;
+  background-color: #06496b;
+  color: white;
+  text-shadow: 0 0 0 rgba(0, 0, 0, .2);
+  padding: 2rem;
+  border-bottom: 1px solid #06496b;
+}
+
+#header-inner div.title a {
+    color: white;
+}
+
+.mobile #header-inner div.title{
+  font-size:1.6rem;
 }
 
 #main { 
@@ -954,7 +963,62 @@ br {
    font-size: 1.2;
    font-style: italic;
    color: #666;
-}]]></b:skin>
+}
+
+
+#l4u-footer {
+  padding: 1.5rem 0 2rem 0;
+  background: linear-gradient(to left, #6A737B, #535B61);
+  color: #BEBEBE;
+}
+
+#l4u-footer p {
+  padding: 0;
+  margin: 0;
+}
+
+.mobile #l4u-footer{
+  padding-bottom: 3rem !important;
+}
+
+#HTML5 .widget-content{
+  padding: 1rem;
+  margin: 0;
+  background-color: #DDD;
+  color: #333;
+}
+
+.fauxcolumn-right-outer .fauxcolumn-inner {
+  border-left: 0;
+}
+
+.columns-inner {
+  padding: 3rem;
+}
+
+.content-inner {
+  padding: 0;
+}
+
+.mobile .columns-inner {
+  padding: 0;
+}
+
+#footer-3 {
+  margin: 0px;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+#footer-3 a {
+  color: #FFF !important;
+}
+
+div#footer-3 .widget {
+    margin: 0px;
+}
+
+]]></b:skin>
     <b:template-skin>
       <b:variable default='960px' name='content.width' type='length' value='1160px'/>
       <b:variable default='0' name='main.column.left.width' type='length' value='0px'/>
@@ -1035,7 +1099,7 @@ br {
   </head>
   <body expr:class='&quot;loading&quot; + data:blog.mobileClass'>
   <b:section class='navbar' id='navbar' maxwidgets='1' name='Navbar' showaddelement='no'>
-    <b:widget id='Navbar1' locked='false' title='Navbar' type='Navbar'>
+    <b:widget id='Navbar1' locked='false' title='Navbar' type='Navbar' version='1'>
       <b:includable id='main'>&lt;script type=&quot;text/javascript&quot;&gt;
     function setAttributeOnload(object, attribute, val) {
       if(window.addEventListener) {
@@ -1329,7 +1393,7 @@ head.appendChild(script);
               <b:widget-settings>
                 <b:widget-setting name='showDateHeader'>true</b:widget-setting>
                 <b:widget-setting name='style.textcolor'>#333333</b:widget-setting>
-                <b:widget-setting name='showShareButtons'>true</b:widget-setting>
+                <b:widget-setting name='showShareButtons'>false</b:widget-setting>
                 <b:widget-setting name='showCommentLink'>false</b:widget-setting>
                 <b:widget-setting name='style.urlcolor'>#666666</b:widget-setting>
                 <b:widget-setting name='showAuthor'>true</b:widget-setting>
@@ -2198,6 +2262,22 @@ head.appendChild(script);
   </div>
 </b:includable>
             </b:widget>
+            <b:widget id='HTML4' locked='false' mobile='yes' title='' type='HTML'>
+              <b:widget-settings>
+                <b:widget-setting name='content'><![CDATA[<div class="sharethis-inline-share-buttons"></div>]]></b:widget-setting>
+              </b:widget-settings>
+              <b:includable id='main'>
+  <!-- only display title if it's non-empty -->
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
+  </b:if>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+
+  <b:include name='quickedit'/>
+</b:includable>
+            </b:widget>
             <b:widget id='HTML3' locked='false' mobile='yes' title='' type='HTML'>
               <b:widget-settings>
                 <b:widget-setting name='content'>&lt;div class=&quot;subheader&quot;&gt;Any comment or suggestion about this post? Please DM me on Twitter at &lt;a href=&quot;https://twitter.com/BrunoHilden&quot;&gt;@BrunoHilden&lt;/a&gt;
@@ -2277,19 +2357,46 @@ head.appendChild(script);
       </macro:include>
       <!-- outside of the include in order to lock Attribution widget -->
       <b:section class='foot' id='footer-3' name='Footer' showaddelement='no'>
-        <b:widget id='Attribution1' locked='false' mobile='yes' title='' type='Attribution'>
+        <b:widget id='HTML5' locked='false' mobile='yes' title='' type='HTML'>
           <b:widget-settings>
-            <b:widget-setting name='copyright'>Copyright &#169; hildenco.com</b:widget-setting>
+            <b:widget-setting name='content'>Is this website helpful to you? Please consider disabling your ad blocker, sharing posts and sending your feedback. Thanks!</b:widget-setting>
           </b:widget-settings>
           <b:includable id='main'>
-    <div class='widget-content' style='text-align: center;'>
-      <b:if cond='data:attribution != &quot;&quot;'>
-       <data:attribution/>
-      </b:if>
-    </div>
+  <!-- only display title if it's non-empty -->
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
+  </b:if>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
 
-    <b:include name='quickedit'/>
-  </b:includable>
+  <b:include name='quickedit'/>
+</b:includable>
+        </b:widget>
+        <b:widget id='HTML6' locked='false' mobile='yes' title='' type='HTML'>
+          <b:widget-settings>
+            <b:widget-setting name='content'>&lt;div id=&quot;l4u-footer&quot;&gt;
+
+&lt;p&gt;
+HildenCo | Development and Open Source Software
+&lt;/p&gt;
+
+ &lt;p&gt;2020 &#169; &lt;a href=&quot;//www.hildenco.com&quot; target=&quot;_blank&quot;&gt;HildenCo Software&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;/div&gt;</b:widget-setting>
+          </b:widget-settings>
+          <b:includable id='main'>
+  <!-- only display title if it's non-empty -->
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
+  </b:if>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+
+  <b:include name='quickedit'/>
+</b:includable>
         </b:widget>
       </b:section>
     </div>
@@ -2473,8 +2580,6 @@ Software Engineer,
 open-source enthusiast&lt;/a&gt;, happy
 &lt;a href=&quot;https://blog.hildenco.com/2018/11/thank-you-fedora.html&quot; target=&quot;_blank&quot;&gt;Fedora Linux&lt;/a&gt; and &lt;a href=&quot;https://blog.hildenco.com/2019/08/how-i-fell-in-love-with-i3.html&quot; target=&quot;_blank&quot;&gt;i3wm user&lt;/a&gt;. &#10084; &lt;a href=&quot;https://golang.org/&quot; target=&quot;_blank&quot;&gt;Go&lt;/a&gt; and &lt;a href=&quot;https://vim.org/&quot; target=&quot;_blank&quot;&gt;Vim&lt;/a&gt;&lt;br /&gt;
 
-&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&quot; /&gt;
-
 &lt;div style=&quot;contacts&quot;&gt;
 
     &lt;a href=&quot;https://www.hildenco.com&quot;&gt;
@@ -2524,7 +2629,7 @@ open-source enthusiast&lt;/a&gt;, happy
 </b:includable>
   </b:widget>
 </b:section-contents><b:section-contents id='footer-2-2'>
-  <b:widget id='PopularPosts2' locked='false' mobile='yes' title='Most Recently Viewed' type='PopularPosts'>
+  <b:widget id='PopularPosts2' locked='false' mobile='yes' title='Popular this week' type='PopularPosts'>
     <b:widget-settings>
       <b:widget-setting name='numItemsToShow'>5</b:widget-setting>
       <b:widget-setting name='showThumbnails'>true</b:widget-setting>
@@ -2606,7 +2711,7 @@ open-source enthusiast&lt;/a&gt;, happy
     <b:widget-settings>
       <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
       <b:widget-setting name='display'>CLOUD</b:widget-setting>
-      <b:widget-setting name='selectedLabelsList'>.Net,.Net Core,AWS,AppInsights,Architecture,Asp.Net,Azure,Best Practices,Blogger,Books,Bootstrap,C#,Career,Certifications,Clean Code,Cloud,Containers,Data Leaks,Databases,Dependency Injection,Design Patterns,Development,Docker,Education,FOSS,Fedora,Firefox,GitHub,Golang,Google,Google Cloud,Hacks,IoT,Javascript,Kubernetes,Linux,MVC,MassTransit,Microservices,Microsoft,MongoDB,NServiceBus,NoSql,Open Source,Powershell,Privacy,QA,RabbitMQ,Raspberry Pi,RavenDB,Red Hat,Redis,Reference,Security,Selenium,Series,Startups,Ubuntu,Vim,Vue.js,WSL,Web,Windows,backend,centOS,devops,front-end,i3,jQuery</b:widget-setting>
+      <b:widget-setting name='selectedLabelsList'>.Net,.Net Core,AWS,AppInsights,Architecture,Asp.Net,Azure,Best Practices,Books,Bootstrap,C#,Career,Certifications,Cloud,Containers,Databases,Dependency Injection,Design Patterns,Development,Docker,FOSS,Fedora,Firefox,GitHub,Golang,Google,Google Cloud,Hacks,IoT,Javascript,Kubernetes,Linux,MVC,MassTransit,Microservices,Microsoft,MongoDB,NServiceBus,NoSql,Open Source,Powershell,Privacy,Python,QA,RabbitMQ,Raspberry Pi,RavenDB,React,Red Hat,Redis,Reference,Rust,Security,Selenium,Startups,Ubuntu,Vim,Vue.js,WSL,Web,Windows,backend,centOS,devops,front-end,i3,jQuery</b:widget-setting>
       <b:widget-setting name='showType'>USER_SELECTED</b:widget-setting>
       <b:widget-setting name='showFreqNumbers'>true</b:widget-setting>
     </b:widget-settings>

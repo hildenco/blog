@@ -10,7 +10,6 @@
       gtag(&#39;config&#39;, &#39;UA-1813817-2&#39;);
     </script>
 	<script async='async' defer='defer' src='https://platform.linkedin.com/badges/js/profile.js' type='text/javascript'/>
-    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'/>
     <script async='async' src='https://platform-api.sharethis.com/js/sharethis.js#property=5f5af0200658220012f2d83c&amp;product=sop' type='text/javascript'/>
     <meta expr:content='data:blog.isMobile         ? &quot;width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0&quot;         : &quot;width=1100&quot;' name='viewport'/>
     <meta content='24E7411151F52A2EE8C78855433F52B7' name='msvalidate.01'/>
@@ -409,13 +408,7 @@ h3.post-title, .comments h4 {
 .post-body img, .post-body .tr-caption-container, .Profile img, .Image img,
 .BlogList .item-thumbnail img {
   padding: $(image.border.small.size);
-
   background: $(image.background.color);
-  border: 1px solid $(image.border.color);
-
-  -moz-box-shadow: 1px 1px 5px rgba(0, 0, 0, .1);
-  -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, .1);
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, .1);
 }
 
 .post-body img, .post-body .tr-caption-container {
@@ -548,6 +541,10 @@ body.mobile  {
   margin: 0;
 }
 
+.date-header span {
+  background-color: orange;
+}
+
 .mobile .date-header span {
   padding: 0.1em 10px;
   margin: 0 -10px;
@@ -598,9 +595,15 @@ body.mobile  {
 
 body {
     background-color: #ededed;
-    background-image: repeating-linear-gradient(-45deg, #e5e5e5, #e5e5e5 1px, transparent 2px, transparent 7px);
-    background-image: -moz-repeating-linear-gradient(-45deg, #e5e5e5, #e5e5e5 1px, transparent 2px, transparent 7px);
-    background-size: 10px 10px;
+}
+
+#navbg {
+  padding: 200px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(180deg, #06496b, #044760, #ededed);
 }
 
 h1 {
@@ -636,7 +639,7 @@ body .navbar{
   color: white;
   text-shadow: 0 0 0 rgba(0, 0, 0, .2);
   padding: 2rem;
-  border-bottom: 1px solid #06496b;
+  border-bottom: 5px solid orange;
 }
 
 #header-inner div.title a {
@@ -644,7 +647,11 @@ body .navbar{
 }
 
 .mobile #header-inner div.title{
-  font-size:1.6rem;
+  font-size:1rem;
+}
+
+.mobile #header-inner div.title {
+    padding: 1rem;
 }
 
 #main { 
@@ -750,8 +757,7 @@ div.PopularPosts h2 {
 }
 
 #PopularPosts1, #PopularPosts2 {
-   border-bottom: 1px solid #dddddd;
-   height: 500px
+ height: 500px
 }
 
 #BlogSearch1 > h2, #Label2 > h2 {
@@ -810,7 +816,6 @@ div.PopularPosts h2 {
 
 #FeaturedPost1 {
   border-bottom: 1px solid #dddddd;
-  padding: 40px 0 80px 0;
   margin: 0;
 }
 
@@ -959,16 +964,15 @@ br {
 }
 
 .subheader {
-   font-family: Georgia, Times, serif;
-   font-size: 1.2;
-   font-style: italic;
-   color: #666;
+  font-family: Georgia, Times, serif;
+  font-size: 1.2;
+  font-style: italic;
+  color: #666;
 }
-
 
 #l4u-footer {
   padding: 1.5rem 0 2rem 0;
-  background: linear-gradient(to left, #6A737B, #535B61);
+  background: linear-gradient(to right, #06496b, #044760);
   color: #BEBEBE;
 }
 
@@ -984,7 +988,7 @@ br {
 #HTML5 .widget-content{
   padding: 1rem;
   margin: 0;
-  background-color: #DDD;
+  background-color: #dedede;
   color: #333;
 }
 
@@ -1005,9 +1009,10 @@ br {
 }
 
 #footer-3 {
-  margin: 0px;
+  margin: 3rem 0;
   text-align: center;
   font-size: 0.8rem;
+  border-top: 1px solid orange;
 }
 
 #footer-3 a {
@@ -1016,6 +1021,10 @@ br {
 
 div#footer-3 .widget {
     margin: 0px;
+}
+
+.m2 {
+  margin: 2rem 0;
 }
 
 ]]></b:skin>
@@ -1098,6 +1107,7 @@ div#footer-3 .widget {
 
   </head>
   <body expr:class='&quot;loading&quot; + data:blog.mobileClass'>
+    <div id='navbg'/>
   <b:section class='navbar' id='navbar' maxwidgets='1' name='Navbar' showaddelement='no'>
     <b:widget id='Navbar1' locked='false' title='Navbar' type='Navbar' version='1'>
       <b:includable id='main'>&lt;script type=&quot;text/javascript&quot;&gt;
@@ -1295,25 +1305,7 @@ head.appendChild(script);
     <div class='fauxborder-left tabs-fauxborder-left'>
     <div class='fauxborder-right tabs-fauxborder-right'/>
     <div class='region-inner tabs-inner'>
-      <b:section class='tabs' id='crosscol' maxwidgets='1' name='Cross-Column' showaddelement='yes'>
-        <b:widget id='AdSense3' locked='false' title='' type='AdSense'>
-          <b:widget-settings>
-            <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
-            <b:widget-setting name='style.textcolor'>#333333</b:widget-setting>
-            <b:widget-setting name='style.layout'>1x1</b:widget-setting>
-            <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
-            <b:widget-setting name='style.urlcolor'>#666666</b:widget-setting>
-            <b:widget-setting name='style.linkcolor'>#2288bb</b:widget-setting>
-            <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
-          </b:widget-settings>
-          <b:includable id='main'>
-  <div class='widget-content'>
-    <data:adCode/>
-    <b:include name='quickedit'/>
-  </div>
-</b:includable>
-        </b:widget>
-      </b:section>
+      <b:section class='tabs' id='crosscol' maxwidgets='1' name='Cross-Column' showaddelement='yes'/>
       <b:section class='tabs' id='crosscol-overflow' name='Cross-Column 2' showaddelement='no'/>
     </div>
     </div>
@@ -2262,9 +2254,10 @@ head.appendChild(script);
   </div>
 </b:includable>
             </b:widget>
-            <b:widget id='HTML4' locked='false' mobile='yes' title='' type='HTML'>
+            <b:widget id='HTML3' locked='false' mobile='yes' title='' type='HTML'>
               <b:widget-settings>
-                <b:widget-setting name='content'><![CDATA[<div class="sharethis-inline-share-buttons"></div>]]></b:widget-setting>
+                <b:widget-setting name='content'>&lt;div class=&quot;subheader m2&quot;&gt;Any comment about this page? Please &lt;a href=&quot;https://twitter.com/hildencosw&quot;&gt;reach out on Twitter&lt;/a&gt;
+&lt;/div&gt;</b:widget-setting>
               </b:widget-settings>
               <b:includable id='main'>
   <!-- only display title if it's non-empty -->
@@ -2278,10 +2271,9 @@ head.appendChild(script);
   <b:include name='quickedit'/>
 </b:includable>
             </b:widget>
-            <b:widget id='HTML3' locked='false' mobile='yes' title='' type='HTML'>
+            <b:widget id='HTML4' locked='false' mobile='yes' title='' type='HTML'>
               <b:widget-settings>
-                <b:widget-setting name='content'>&lt;div class=&quot;subheader&quot;&gt;Any comment or suggestion about this post? Please DM me on Twitter at &lt;a href=&quot;https://twitter.com/BrunoHilden&quot;&gt;@BrunoHilden&lt;/a&gt;
-&lt;/div&gt;</b:widget-setting>
+                <b:widget-setting name='content'><![CDATA[<div class="sharethis-inline-share-buttons"></div>]]></b:widget-setting>
               </b:widget-settings>
               <b:includable id='main'>
   <!-- only display title if it's non-empty -->
@@ -2359,7 +2351,7 @@ head.appendChild(script);
       <b:section class='foot' id='footer-3' name='Footer' showaddelement='no'>
         <b:widget id='HTML5' locked='false' mobile='yes' title='' type='HTML'>
           <b:widget-settings>
-            <b:widget-setting name='content'>Is this website helpful to you? Please consider disabling your ad blocker, sharing posts and sending your feedback. Thanks!</b:widget-setting>
+            <b:widget-setting name='content'><![CDATA[Is this website helpful to you? Please consider disabling your ad blocker, sharing posts and <a href="https://twitter.com/BrunoHilden" target="_blank">sending your feedback</a>. Thanks!]]></b:widget-setting>
           </b:widget-settings>
           <b:includable id='main'>
   <!-- only display title if it's non-empty -->
@@ -2377,12 +2369,21 @@ head.appendChild(script);
           <b:widget-settings>
             <b:widget-setting name='content'>&lt;div id=&quot;l4u-footer&quot;&gt;
 
-&lt;p&gt;
-HildenCo | Development and Open Source Software
+ &lt;p&gt;
+  &lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt; |
+  &lt;a href=&quot;/p/contribute.html&quot;&gt;Contribute&lt;/a&gt; |
+  &lt;a href=&quot;/p/privacy.html&quot;&gt;Privacy&lt;/a&gt; |
+  &lt;a href=&quot;/p/about.html&quot;&gt;About Us&lt;/a&gt; |
+  &lt;a href=&quot;/p/contact.html&quot;&gt;Contact&lt;/a&gt; |
+  &lt;a href=&quot;//github.com/hildenco&quot; target=&quot;_blank&quot;&gt;GitHub&lt;/a&gt; |
+  &lt;a href=&quot;//blog.hildenco.com/feeds/posts/default&quot; target=&quot;_blank&quot;&gt;RSS&lt;/a&gt; |
+  &lt;a href=&quot;//www.hildenco.com&quot; target=&quot;_blank&quot;&gt;HildenCo.com&lt;/a&gt;
+ &lt;/p&gt;
+
+&lt;p&gt;HildenCo | Development and Open Source Software
 &lt;/p&gt;
-
- &lt;p&gt;2020 &#169; &lt;a href=&quot;//www.hildenco.com&quot; target=&quot;_blank&quot;&gt;HildenCo Software&lt;/a&gt;&lt;/p&gt;
-
+&lt;p&gt;2020 &#169; &lt;a href=&quot;//www.hildenco.com&quot; target=&quot;_blank&quot;&gt;HildenCo Software&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; Made with 🧡 in Canada&lt;/p&gt;
 
 &lt;/div&gt;</b:widget-setting>
           </b:widget-settings>
@@ -2465,30 +2466,13 @@ HildenCo | Development and Open Source Software
 </macro:includable>
 
 <b:section-contents id='footer-1'>
-  <b:widget id='AdSense1' locked='false' title='' type='AdSense'>
-    <b:widget-settings>
-      <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
-      <b:widget-setting name='style.textcolor'>#333333</b:widget-setting>
-      <b:widget-setting name='style.layout'>1x1</b:widget-setting>
-      <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
-      <b:widget-setting name='style.urlcolor'>#2288bb</b:widget-setting>
-      <b:widget-setting name='style.linkcolor'>#222222</b:widget-setting>
-      <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
-    </b:widget-settings>
-    <b:includable id='main'>
-  <div class='widget-content'>
-    <data:adCode/>
-    <b:include name='quickedit'/>
-  </div>
-</b:includable>
-  </b:widget>
   <b:widget id='FeaturedPost1' locked='false' mobile='yes' title='Featured this Week' type='FeaturedPost'>
     <b:widget-settings>
       <b:widget-setting name='showSnippet'>true</b:widget-setting>
       <b:widget-setting name='showPostTitle'>true</b:widget-setting>
-      <b:widget-setting name='postId'>8021895329589542975</b:widget-setting>
+      <b:widget-setting name='postId'>750053579288401509</b:widget-setting>
       <b:widget-setting name='showFirstImage'>true</b:widget-setting>
-      <b:widget-setting name='useMostRecentPost'>true</b:widget-setting>
+      <b:widget-setting name='useMostRecentPost'>false</b:widget-setting>
     </b:widget-settings>
     <b:includable id='main'>
   <!-- Only display title if it's non-empty -->
@@ -2575,27 +2559,14 @@ HildenCo | Development and Open Source Software
       <b:widget-setting name='content'>&lt;h2&gt;Who am I?&lt;/h2&gt;
 &lt;div class=&quot;about-me&quot;&gt;
 &lt;strong&gt;Bruno Hildenbrand&lt;/strong&gt;&lt;br /&gt;
-Software Engineer, 
+Software Engineer and 
 &lt;a href=&quot;https://github.com/hd9&quot; target=&quot;_blank&quot;&gt;
-open-source enthusiast&lt;/a&gt;, happy
-&lt;a href=&quot;https://blog.hildenco.com/2018/11/thank-you-fedora.html&quot; target=&quot;_blank&quot;&gt;Fedora Linux&lt;/a&gt; and &lt;a href=&quot;https://blog.hildenco.com/2019/08/how-i-fell-in-love-with-i3.html&quot; target=&quot;_blank&quot;&gt;i3wm user&lt;/a&gt;. &#10084; &lt;a href=&quot;https://golang.org/&quot; target=&quot;_blank&quot;&gt;Go&lt;/a&gt; and &lt;a href=&quot;https://vim.org/&quot; target=&quot;_blank&quot;&gt;Vim&lt;/a&gt;&lt;br /&gt;
+open-source enthusiast&lt;/a&gt;.&lt;br /&gt;
+🧡 .NET, &lt;a href=&quot;https://golang.org/&quot; target=&quot;_blank&quot;&gt;Go&lt;/a&gt;, Linux, &lt;a href=&quot;https://vim.org/&quot; target=&quot;_blank&quot;&gt;Vim&lt;/a&gt;, &lt;a href=&quot;https://blog.hildenco.com/2018/11/thank-you-fedora.html&quot; target=&quot;_blank&quot;&gt;Fedora&lt;/a&gt;, 
+&lt;a href=&quot;https://blog.hildenco.com/2019/08/how-i-fell-in-love-with-i3.html&quot; target=&quot;_blank&quot;&gt;i3&lt;/a&gt;, Azure, Docker &amp;amp; Kubernetes.
+&lt;br /&gt;
 
-&lt;div style=&quot;contacts&quot;&gt;
-
-    &lt;a href=&quot;https://www.hildenco.com&quot;&gt;
-        &lt;i class=&quot;fa fa-server&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
-    &lt;/a&gt;
-    &lt;a href=&quot;https://twitter.com/brunohilden&quot;&gt;
-        &lt;i class=&quot;fa fa-twitter&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
-    &lt;/a&gt;
-    &lt;a href=&quot;https://github.com/hd9&quot;&gt;
-        &lt;i class=&quot;fa fa-github&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
-    &lt;/a&gt;
-    &lt;a href=&quot;https://www.linkedin.com/in/brunohildenbrand/&quot;&gt;
-        &lt;i class=&quot;fa fa-linkedin&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
-    &lt;/a&gt;
-
-&lt;/div&gt;
+&lt;div class=&quot;sharethis-inline-follow-buttons m2&quot;&gt;&lt;/div&gt;
 
 &lt;/div&gt;</b:widget-setting>
     </b:widget-settings>
@@ -2614,7 +2585,7 @@ open-source enthusiast&lt;/a&gt;, happy
   <b:widget id='HTML2' locked='false' title='' type='HTML'>
     <b:widget-settings>
       <b:widget-setting name='content'>&lt;h2&gt;Recent Tweets&lt;/h2&gt;
-&lt;a class=&quot;twitter-timeline&quot; data-width=&quot;500&quot; data-height=&quot;300&quot; data-tweet-limit=&quot;2&quot; data-chrome=&quot;noheader nofooter noborders&quot; href=&quot;https://twitter.com/BrunoHilden?ref_src=twsrc%5Etfw&quot;&gt;@BrunoHilden&lt;/a&gt; &lt;script async=&quot;async&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot; &gt;&lt;/script&gt;</b:widget-setting>
+&lt;a class=&quot;twitter-timeline&quot; data-width=&quot;500&quot; data-height=&quot;300&quot; data-tweet-limit=&quot;1&quot; data-chrome=&quot;noheader nofooter noborders&quot; href=&quot;https://twitter.com/hildencosw?ref_src=twsrc%5Etfw&quot;&gt;&lt;/a&gt; &lt;script async=&quot;async&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot; &gt;&lt;/script&gt;</b:widget-setting>
     </b:widget-settings>
     <b:includable id='main'>
   <!-- only display title if it's non-empty -->

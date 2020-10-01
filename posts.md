@@ -7,8 +7,11 @@
 <div class="subheader">Photo by XXXXX on <a href="https://unsplash.com/photos/XXXXX">Unsplash</a><br /><br /></div>
 
 # Posts
-Send emails from ASP.NET Core websites using SendGrid and Azure  https://blog.hildenco.com/2020/07/send-emails-from-aspnet-core-websites.html
+Building and Hosting Docker images on GitHub with GitHub Actions https://blog.hildenco.com/2020/10/building-and-hosting-docker-images-on.html
+Creating ASP.NET Core websites with Docker https://blog.hildenco.com/2020/10/how-to-create-aspnet-core-website-with.html
 Hosting NuGet packages on GitHub https://blog.hildenco.com/2020/07/hosting-nuget-packages-on-github.html
+Hosting Docker images on GitHub https://blog.hildenco.com/2020/09/hosting-docker-images-on-github.html
+Send emails from ASP.NET Core websites using SendGrid and Azure  https://blog.hildenco.com/2020/07/send-emails-from-aspnet-core-websites.html
 20 tips to manage Linux VMs on Azure https://blog.hildenco.com/2020/07/20-tips-to-manage-linux-vms-on-azure.html
 How to create a CentOS VM on Azure https://blog.hildenco.com/2020/07/how-to-create-centos-vm-on-azure.html
 How to create a CentOS Stream VM on Hyper-V https://blog.hildenco.com/2020/06/how-to-create-centos-stream-vm-on-hyper.html

@@ -2,7 +2,8 @@
 Drafts and resources for blog
 
 ## 👋 Hi there! Thanks for visiting this page 
-We've been developing software for over 15 years. Our previous experience includes projects for the cloud and mobile applications.
+We are [HildenCo Software](//www.hildenco.com) and we have been developing software for over 15 years.
+We have in-depth expertise with web, cloud and mobile applications.
 
 We have suffessfully completed projects on Web development (front and back-ends), Databases (Sql and NoSql), Mobile Applications,
 Cloud (Azure), Analytics, microservices (Docker and Kubernetes) and can also help your business with software architecture and cyber security.
@@ -67,4 +68,4 @@ Please check some of my most popular blog posts.
 * [Security and development: how much is being done?](https://blog.hildenco.com/2017/08/security-is-important.html)
 
 ## 📫 Reaching out...
-Reach out to me on [Twitter](https://twitter.com/hildencosw).
+Reach out to us on [Twitter](https://twitter.com/hildencosw).

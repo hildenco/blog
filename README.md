@@ -5,11 +5,17 @@ Drafts and resources for [our blog](https://blog.hildenco.com)
 Hi there 👋, thanks for visiting our site! We are HildenCo Software a community of enthusiast open-source developers.
 
 ### We believe in Open-Source
-We believe that high quality software can be developed on time when the right tools and processes are used.  By leveraging free/open-source software, organizations around the world can build modern, reliable and scalable products. Open-source software is also key to drive innovation and a major enabler in emerging technologies.
+We believe that high quality software can be developed on time when the right
+tools and processes are used.  By leveraging free/open-source software,
+organizations around the world can build modern, reliable and scalable products.
+Open-source software is also key to drive innovation and a major enabler in
+emerging technologies.
 
 ### Our commitment to Free/Open-Source software
-We believe that free/open-source software is the best solution for digital illiteracy due to its free, open and inclusive nature. With our blogs, we foster Linux and free/open-source software helping organizations around the world to leverage these fantastic technologies.
-
+We believe that free/open-source software is the best solution for digital
+illiteracy due to its free, open and inclusive nature. With our blogs, we foster
+Linux and free/open-source software helping organizations around the world to
+leverage these fantastic technologies.
 
 # Our Blogs
 * [HildenCo | Blog](https://blog.hildenco.com): Blog about development, cloud and open-source software

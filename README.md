@@ -1,13 +1,15 @@
 # HildenCo | Blog
-Drafts and resources for blog
+Drafts and resources for [our blog](https://blog.hildenco.com)
 
 ## 👋 Hi there! Thanks for visiting this page 
-We've been developing software for over 15 years. Our previous experience includes projects for the cloud and mobile applications.
+Hi there 👋, thanks for visiting our site! We are HildenCo Software a community of enthusiast open-source developers.
 
-We have suffessfully completed projects on Web development (front and back-ends), Databases (Sql and NoSql), Mobile Applications,
-Cloud (Azure), Analytics, microservices (Docker and Kubernetes) and can also help your business with software architecture and cyber security.
+### We believe in Open-Source
+We believe that high quality software can be developed on time when the right tools and processes are used.  By leveraging free/open-source software, organizations around the world can build modern, reliable and scalable products. Open-source software is also key to drive innovation and a major enabler in emerging technologies.
 
-Check out blog at: [blog.hildenco.com](https://blog.hildenco.com)
+### Our commitment to Free/Open-Source software
+We believe that free/open-source software is the best solution for digital illiteracy due to its free, open and inclusive nature. With our blogs, we foster Linux and free/open-source software helping organizations around the world to leverage these fantastic technologies.
+
 
 # Our Blogs
 * [HildenCo | Blog](https://blog.hildenco.com): Blog about development, cloud and open-source software
@@ -16,7 +18,6 @@ Check out blog at: [blog.hildenco.com](https://blog.hildenco.com)
 * [Golang4Us](https://www.golang4us.com): Tips in tricks to learn the Go programming Language (under development)
 
 And more to come 😊
-
 
 # 💬 Popular blog posts
 Please check some of my most popular blog posts.
@@ -33,6 +34,18 @@ Please check some of my most popular blog posts.
 * [How to copy data between Azure databases](https://blog.hildenco.com/2019/02/copying-data-between-azure-databases-in.html)
 * [How to enable ASP.NET error pages using Azure Serial Console](https://blog.hildenco.com/2020/02/enabling-aspnet-error-pages-using-azure.html)
 * [Configuration in .NET Core console applications](https://blog.hildenco.com/2020/05/configuration-in-net-core-console.html)
+* [Building and Hosting Docker images on GitHub with GitHub Actions](https://blog.hildenco.com/2020/10/building-and-hosting-docker-images-on.html)
+* [Testing JavaScript on ASP.NET Core Applications](https://blog.hildenco.com/2018/04/testing-javascript-on-aspnet-core.html)
+
+**.NET/ASP.NET/Azure**:
+* [Adding Application Insights to a ASP.NET Core website](https://blog.hildenco.com/2020/03/adding-application-insights-telemetry.html)
+* [Send emails from ASP.NET Core websites using SendGrid and Azure](https://blog.hildenco.com/2020/07/send-emails-from-aspnet-core-websites.html)
+* [How to copy data between Azure databases](https://blog.hildenco.com/2019/02/copying-data-between-azure-databases-in.html)
+* [How to enable ASP.NET error pages using Azure Serial Console](https://blog.hildenco.com/2020/02/enabling-aspnet-error-pages-using-azure.html)
+* [Adding Application Insights telemetry to your ASP.NET Core website](https://blog.hildenco.com/2020/03/adding-application-insights-telemetry.html)
+* [How to suppress Application Insights telemetry](https://blog.hildenco.com/2020/03/how-to-suppress-application-insights.html)
+* [Monitor ASP.NET applications using Application Insights and Azure Alerts](https://blog.hildenco.com/2020/04/monitor-aspnet-applications-using.html)
+* [How to profile ASP.NET apps using Application Insights](https://blog.hildenco.com/2020/04/how-to-profile-aspnet-apps-using.html)
 
 **Linux and open-source**:
 * [How I fell in love with i3](https://blog.hildenco.com/2019/08/how-i-fell-in-love-with-i3.html)
@@ -49,6 +62,7 @@ Please check some of my most popular blog posts.
 **GitHub**:
 * [Hosting NuGet packages on GitHub](https://blog.hildenco.com/2020/07/hosting-nuget-packages-on-github.html)
 * [Hosting Docker images on GitHub](https://blog.hildenco.com/2020/09/hosting-docker-images-on-github.html)
+* [Building and Hosting Docker images on GitHub with GitHub Actions](https://blog.hildenco.com/2020/10/building-and-hosting-docker-images-on.html)
 
 **Books**:
 * [Hello, Startup - A book for developers building their startups](https://blog.hildenco.com/2018/08/hello-startup-book-for-developers.html)
@@ -67,4 +81,4 @@ Please check some of my most popular blog posts.
 * [Security and development: how much is being done?](https://blog.hildenco.com/2017/08/security-is-important.html)
 
 ## 📫 Reaching out...
-Reach out to me on [Twitter](https://twitter.com/hildencosw).
+Reach out to us on [Twitter](https://twitter.com/hildencosw).

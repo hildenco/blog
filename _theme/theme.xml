@@ -2415,7 +2415,7 @@ Software Engineer and open-source enthusiast.&lt;br /&gt;
         </b:widget>
         <b:widget id='HTML5' locked='false' mobile='yes' title='' type='HTML'>
           <b:widget-settings>
-            <b:widget-setting name='content'><![CDATA[Is this website helpful to you? Please consider disabling your ad blocker, sharing posts and <a href="https://twitter.com/BrunoHilden" target="_blank">sending your feedback</a>. Thanks!]]></b:widget-setting>
+            <b:widget-setting name='content'><![CDATA[Is this website helpful to you? Please consider subscribing, sharing posts and <a href="https://twitter.com/brunohilden" target="_blank">sending your feedback</a>. Thanks!]]></b:widget-setting>
           </b:widget-settings>
           <b:includable id='main'>
   <!-- only display title if it's non-empty -->
@@ -2701,35 +2701,22 @@ Software Engineer and open-source enthusiast.&lt;br /&gt;
   </div>
 </b:includable>
   </b:widget>
-  <b:widget id='BlogSearch1' locked='false' title='Search' type='BlogSearch'>
+  <b:widget id='AdSense2' locked='false' title='' type='AdSense'>
+    <b:widget-settings>
+      <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
+      <b:widget-setting name='style.textcolor'>#333333</b:widget-setting>
+      <b:widget-setting name='style.layout'>1x1</b:widget-setting>
+      <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
+      <b:widget-setting name='style.urlcolor'>#2288bb</b:widget-setting>
+      <b:widget-setting name='style.linkcolor'>#222222</b:widget-setting>
+      <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
+    </b:widget-settings>
     <b:includable id='main'>
-    <!-- only display title if it's non-empty -->
-    <b:if cond='data:title != &quot;&quot;'>
-      <h2 class='title'><data:title/></h2>
-    </b:if>
-
-    <div class='widget-content'>
-      <div expr:id='data:widget.instanceId + &quot;_form&quot;'>
-        <form class='gsc-search-box' expr:action='data:blog.searchUrl'>
-          <b:attr cond='not data:view.isPreview' name='target' value='_top'/>
-          <table cellpadding='0' cellspacing='0' class='gsc-search-box'>
-            <tbody>
-              <tr>
-                <td class='gsc-input'>
-                  <input autocomplete='off' class='gsc-input' expr:value='data:view.isSearch ? data:view.search.query.escaped : &quot;&quot;' name='q' size='10' title='search' type='text'/>
-                </td>
-                <td class='gsc-search-button'>
-                  <input class='gsc-search-button' expr:value='data:messages.search' title='search' type='submit'/>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </form>
-      </div>
-    </div>
-
+  <div class='widget-content'>
+    <data:adCode/>
     <b:include name='quickedit'/>
-  </b:includable>
+  </div>
+</b:includable>
   </b:widget>
   <b:widget id='FollowByEmail1' locked='false' title='Follow by Email' type='FollowByEmail'>
     <b:includable id='main'>
@@ -2755,23 +2742,6 @@ Software Engineer and open-source enthusiast.&lt;br /&gt;
   <span class='item-control blog-admin'>
     <b:include name='quickedit'/>
   </span>
-</b:includable>
-  </b:widget>
-  <b:widget id='AdSense2' locked='false' title='' type='AdSense'>
-    <b:widget-settings>
-      <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
-      <b:widget-setting name='style.textcolor'>#333333</b:widget-setting>
-      <b:widget-setting name='style.layout'>1x1</b:widget-setting>
-      <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
-      <b:widget-setting name='style.urlcolor'>#2288bb</b:widget-setting>
-      <b:widget-setting name='style.linkcolor'>#222222</b:widget-setting>
-      <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
-    </b:widget-settings>
-    <b:includable id='main'>
-  <div class='widget-content'>
-    <data:adCode/>
-    <b:include name='quickedit'/>
-  </div>
 </b:includable>
   </b:widget>
   <b:widget id='Label2' locked='false' mobile='yes' title='Other Topics' type='Label'>
@@ -2819,5 +2789,35 @@ Software Engineer and open-source enthusiast.&lt;br /&gt;
     <b:include name='quickedit'/>
   </div>
 </b:includable>
+  </b:widget>
+  <b:widget id='BlogSearch1' locked='false' title='Search' type='BlogSearch'>
+    <b:includable id='main'>
+    <!-- only display title if it's non-empty -->
+    <b:if cond='data:title != &quot;&quot;'>
+      <h2 class='title'><data:title/></h2>
+    </b:if>
+
+    <div class='widget-content'>
+      <div expr:id='data:widget.instanceId + &quot;_form&quot;'>
+        <form class='gsc-search-box' expr:action='data:blog.searchUrl'>
+          <b:attr cond='not data:view.isPreview' name='target' value='_top'/>
+          <table cellpadding='0' cellspacing='0' class='gsc-search-box'>
+            <tbody>
+              <tr>
+                <td class='gsc-input'>
+                  <input autocomplete='off' class='gsc-input' expr:value='data:view.isSearch ? data:view.search.query.escaped : &quot;&quot;' name='q' size='10' title='search' type='text'/>
+                </td>
+                <td class='gsc-search-button'>
+                  <input class='gsc-search-button' expr:value='data:messages.search' title='search' type='submit'/>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </form>
+      </div>
+    </div>
+
+    <b:include name='quickedit'/>
+  </b:includable>
   </b:widget>
 </b:section-contents></html>

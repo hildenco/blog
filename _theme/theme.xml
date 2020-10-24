@@ -37,7 +37,7 @@ URL:      www.blogger.com
 
    <Group description="Page Text" selector="body">
      <Variable name="body.font" description="Font" type="font"
-         default="normal normal 12px Arial, Tahoma, Helvetica, FreeSans, sans-serif" value="normal normal 18px Lato"/>
+         default="normal normal 12px Arial, Tahoma, Helvetica, FreeSans, sans-serif" value="normal normal 16px Roboto"/>
      <Variable name="body.text.color" description="Text Color" type="color" default="#222222" value="#333333"/>
    </Group>
 
@@ -200,10 +200,6 @@ html body $(page.width.selector) {
   width: $(page.width);
 }
 
-h2 {
-  font-size: 22px;
-}
-
 a:link {
   text-decoration:none;
   color: $(link.color);
@@ -343,16 +339,6 @@ $(content.background.color.selector) {
   border-left: 1px solid $(body.rule.color);
 }
 
-/* Headings
------------------------------------------------ */
-div.widget > h2,
-div.widget h2.title {
-  margin: 0 0 1em 0;
-
-  font: $(widget.title.font);
-  color: $(widget.title.text.color);
-}
-
 /* Widgets
 ----------------------------------------------- */
 .widget .zippy {
@@ -376,11 +362,6 @@ h2.date-header {
   padding: $(date.header.padding);
   letter-spacing: $(date.header.letterspacing);
   margin: $(date.header.margin);
-}
-
-.main-inner {
-  padding-top: $(main.padding.top);
-  padding-bottom: $(main.padding.bottom);
 }
 
 .main-inner .column-center-inner {
@@ -431,6 +412,23 @@ h3.post-title, .comments h4 {
   box-shadow: 0 0 0 rgba(0, 0, 0, .1);
 }
 
+header {
+  background-color: #06496b;
+  top: 0;
+  margin: 0;
+  padding: 3rem 1rem 1rem 0;
+  border-bottom: 5px solid #f57c00;
+}
+
+.header-separator {
+  background-color: #ededed;
+  padding: 1rem;
+}
+
+.mobile .header-separator {
+  display: none;
+}
+
 .post-header {
   margin: 0 0 1.5em;
 
@@ -448,6 +446,24 @@ h3.post-title, .comments h4 {
 
   line-height: 1.6;
   font-size: 90%;
+}
+
+.alignleft {
+  float: left;
+  text-align:left;
+  width:50%;
+}
+
+.aligncenter {
+  float: left;
+  text-align:center;
+}
+
+.alignright {
+  float: left;
+  text-align:right;
+  width:50%;
+  margin-top: 1rem;
 }
 
 #comments .comment-author {
@@ -492,10 +508,6 @@ h3.post-title, .comments h4 {
 
 /* Accents
 ---------------------------------------------- */
-.section-columns td.columns-cell {
-  border-$startSide: 1px solid $(body.rule.color);
-}
-
 .blog-pager {
   background: $(paging.background);
 }
@@ -504,10 +516,6 @@ h3.post-title, .comments h4 {
 .blog-pager-newer-link {
   background-color: $(content.background.color);
   padding: 5px;
-}
-
-.footer-outer {
-  border-top: $(footer.bevel) dashed #bbbbbb;
 }
 
 /* Mobile
@@ -604,34 +612,32 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  background: linear-gradient(180deg, #06496b, #044760, #ededed);
+  background: linear-gradient(180deg, #06496b, #06496b, #044760, #ededed);
 }
 
 h1 {
-   font-size: 2em;
+ font-size: 2.2em;
 }
 
-h2{
-   color: #444;
-   margin:40px 0 10px 0;
-   font-face: 'GFS Didot';
-   font-size: 26px;
+h2 {
+ color: #444;
+ margin: 1em 0 10px 0;
+ font-size: 26px;
 }
 
 h3,h4,h5{
-   color: #444;
-   margin: 32px 0 6px 0;
-   font-size: 18px;
-   font-face: 'GFS Didot';
+ color: #444;
+ margin: 32px 0 6px 0;
+ font-size: 18px;
 }
 
 body .navbar{
-   height:0px;
+ height:0px;
 }
 
 #header-inner .titlewrapper{
-  padding:0;
-  margin:0;
+ padding:0;
+ margin:0;
 }
 
 #header-inner div.title{
@@ -658,10 +664,6 @@ body .navbar{
 #main { 
    padding: 0 !important;
    margin: 0 !important;
-}
-
-.main-inner {
-   padding-top: 15px !important;
 }
 
 .post-header {
@@ -700,10 +702,12 @@ blockquote {
    font-family: Georgia, Times, serif;
 }
 
+#footer-1 {
+  padding: 0 3rem;
+}
 
-#footer-1 #Label2 h2 {
-   font: normal normal 22px Open Sans;
-   color: #222222;
+.mobile #footer-1 {
+  padding: 0;
 }
 
 .footer-outer {
@@ -720,12 +724,6 @@ blockquote {
 
 #blog-pager-older-link {
    float: inherit;
-}
-
-div.PopularPosts h2 {
-   margin-top: 30px;
-   font-face: 'GFS Didot';
-   font-size: 26px;
 }
 
 .svg-inline--fa.fa-fw {
@@ -746,7 +744,6 @@ div.PopularPosts h2 {
 
 .item-title {
    font-size: 18px;
-   font-face: 'GFS Didot';
 }
 
 .item-thumbnail img {
@@ -757,18 +754,125 @@ div.PopularPosts h2 {
    padding: 0px;
 }
 
-#PopularPosts1, #PopularPosts2 {
- height: 500px
-}
-
-#BlogSearch1 > h2, #Label2 > h2 {
-   margin: 15px 0 10px 0;
-   font-face: 'GFS Didot';
-   font-size: 26px;
-}
-
 .item-snippet {
    font-size: 12px;
+}
+
+#l4u-header {
+  font-size: 0.8rem;
+}
+
+#l4u-header .alignleft a {
+  font-size: 1.5rem;
+  color:white;
+}
+
+#l4u-header .alignright {
+  margin-top: 2rem;
+  text-transform: uppercase;
+}
+
+#l4u-header .alignright a{
+  color: #e3e3e3;
+  padding-left: .5rem;
+}
+
+.mobile #l4u-header .alignright a {
+  color: #1E273D;
+  padding-left: .1em;
+}
+
+#l4u-header .logo {
+  background-color: #f57c00;
+  color: #white;
+  display: inline-block;
+  padding: 0 .8em 0 1em;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+}
+
+#l4u-header .desc {
+  color: white;
+  letter-spacing: 0.05em;
+  padding: 0.2em 1.7em;
+}
+
+
+body.mobile {
+  padding-top: 50px;
+}
+
+.mobile header {
+  display: block;
+  z-index: 999;
+  margin: 0;
+  padding: 0;
+  border-bottom: 0;
+}
+
+.mobile #l4u-header {
+  background-color: #06496b;
+  margin: 0;
+  position: fixed;
+  text-transform: uppercase;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10000;
+  box-shadow: 0 0 0.25em 0 rgba(0, 0, 0, 0.15);
+}
+
+.mobile #l4u-header .alignright {
+  margin-top: .8em;
+}
+
+.mobile #l4u-header .alignleft a {
+  font-size: 1rem;
+  padding: 0 .5em;
+}
+
+.mobile header .alignright {
+  float: inherit;
+  width: 100%;
+  text-align: inherit;
+  color: white;
+  background-color: #ededed;
+  padding: .2rem .3em;
+}
+
+.mobile header .alignleft {
+  float: initial;
+  width: 100%;
+  color: white;
+  padding: .5rem 0 0 .3rem;
+}
+
+.mobile #l4u-header .desc {
+  display:none;
+}
+
+.mobile div#FeaturedPost1 {
+    padding: 1rem;
+}
+
+.mobile #header-inner {
+  overflow: unset !important;
+}
+
+.mobile #blog-pager {
+  display: none;
+}
+
+.mobile #HTML3 {
+  padding: 0 12px;
+}
+
+.mobile #Label1 {
+  padding: 0 0 2rem 1rem;
+}
+
+.mobile #Label1 h2 {
+  font-size: 1.8em !important;
 }
 
 .mobile div#FeaturedPost1 {
@@ -783,6 +887,14 @@ div.PopularPosts h2 {
   padding: 0 0 2em 10px;
 }
 
+.mobile #BlogSearch1, .mobile #FollowByEmail1 {
+  padding: 0 0 0 10px;
+}
+
+.mobile footer input[type="text"] {
+  width: 200px;
+}
+
 .mobile #HTML3 {
   padding: 0 10px;
 }
@@ -792,7 +904,7 @@ div.PopularPosts h2 {
 }
 
 .mobile #Label2 {
-  padding: 10px;
+  padding: 0 10px;
 }
 
 .mobile #Label1 h2 {
@@ -800,7 +912,7 @@ div.PopularPosts h2 {
 }
 
 .mobile #PopularPosts1, .mobile #PopularPosts2 {
-  padding: 10px;
+  padding: 0 10px;
 }
 
 .mobile .item-thumbnail {
@@ -813,15 +925,12 @@ div.PopularPosts h2 {
     max-height: 60px;
 }
 
-#FeaturedPost1 h2 {
-  font-size: 1.8em;
-  margin: 10px 0 0 0;
-  padding: 0;
+.header-inner .widget {
+  margin: 0px !important!
 }
 
-#FeaturedPost1 {
-  border-bottom: 1px solid #dddddd;
-  margin: 0;
+#header .widget {
+  margin: 0 !important;
 }
 
 #FeaturedPost1 h2 {
@@ -830,6 +939,11 @@ div.PopularPosts h2 {
   padding: 0;
 }
 
+#FeaturedPost1 h2 {
+  font-size: 1.8em;
+  margin: 10px 0 0 0;
+  padding: 0;
+}
 
 #FeaturedPost1 div.post-summary h3 {
   font-size: 1.5em;
@@ -859,10 +973,6 @@ div.PopularPosts h2 {
    letter-spacing: -0.02em;
    color: #444;
    letter-spacing: -0.002em;
-}
-
-h2 {
-   font-size: 30px;
 }
 
 h3 {
@@ -1014,7 +1124,6 @@ br {
 }
 
 #footer-3 {
-  margin: 3rem 0;
   text-align: center;
   font-size: 0.8rem;
   border-top: 1px solid #f57c00;
@@ -1038,11 +1147,33 @@ td.tr-caption {
   font-family: Georgia, serif;
 }
 
+.section {
+  margin: 0px
+}
+
+.sidebar {
+  font-size: .8em;
+}
+
+.sidebar h2 {
+  font-size: 20px;
+}
+
+table.section-columns {
+  padding: 0 3rem;
+}
+
+.st-top {
+  font-size: 20px;
+  font: normal normal 20px Roboto;
+  font-weight: 600;
+}
+
 ]]></b:skin>
     <b:template-skin>
-      <b:variable default='960px' name='content.width' type='length' value='1160px'/>
+      <b:variable default='960px' name='content.width' type='length' value='1100px'/>
       <b:variable default='0' name='main.column.left.width' type='length' value='0px'/>
-      <b:variable default='310px' name='main.column.right.width' type='length' value='0px'/>
+      <b:variable default='310px' name='main.column.right.width' type='length' value='260px'/>
 
       <![CDATA[
       body {
@@ -1137,7 +1268,7 @@ td.tr-caption {
       gapi.load(&quot;gapi.iframes:gapi.iframes.style.bubble&quot;, function() {
         if (gapi.iframes &amp;&amp; gapi.iframes.getContext) {
           gapi.iframes.getContext().openChild({
-              url: &#39;https://www.blogger.com/navbar.g?targetBlogID\x3d2438988486310590284\x26blogName\x3dHildenCo+-+Development,+Cloud,+Archit...\x26publishMode\x3dPUBLISH_MODE_HOSTED\x26navbarType\x3dDISABLED\x26layoutType\x3dLAYOUTS\x26searchRoot\x3dhttps://blog.hildenco.com/search\x26blogLocale\x3den\x26v\x3d2\x26homepageUrl\x3dhttps://blog.hildenco.com/\x26vt\x3d-8352481749466001213&#39;,
+              url: &#39;https://www.blogger.com/navbar.g?targetBlogID\x3d2438988486310590284\x26blogName\x3dHildenCo+Software\x26publishMode\x3dPUBLISH_MODE_HOSTED\x26navbarType\x3dDISABLED\x26layoutType\x3dLAYOUTS\x26searchRoot\x3dhttps://blog.hildenco.com/search\x26blogLocale\x3den\x26v\x3d2\x26homepageUrl\x3dhttps://blog.hildenco.com/\x26vt\x3d-8352481749466001213&#39;,
               where: document.getElementById(&quot;navbar-iframe-container&quot;),
               id: &quot;navbar-iframe&quot;
           });
@@ -1222,80 +1353,34 @@ head.appendChild(script);
     <div class='fauxborder-right header-fauxborder-right'/>
     <div class='region-inner header-inner'>
       <b:section class='header' id='header' maxwidgets='1' name='Header' showaddelement='no'>
-        <b:widget id='Header1' locked='false' title='HildenCo - Development, Cloud, Architecture and Open-Source Software (Header)' type='Header' version='1'>
+        <b:widget id='HTML7' locked='false' mobile='yes' title='' type='HTML'>
           <b:widget-settings>
-            <b:widget-setting name='displayUrl'/>
-            <b:widget-setting name='displayHeight'>0</b:widget-setting>
-            <b:widget-setting name='sectionWidth'>-1</b:widget-setting>
-            <b:widget-setting name='useImage'>false</b:widget-setting>
-            <b:widget-setting name='shrinkToFit'>false</b:widget-setting>
-            <b:widget-setting name='imagePlacement'>BEHIND</b:widget-setting>
-            <b:widget-setting name='displayWidth'>0</b:widget-setting>
+            <b:widget-setting name='content'>&lt;div id=&quot;l4u-header&quot;&gt;
+ &lt;div class=&quot;alignleft&quot;&gt;
+  &lt;a href=&quot;/&quot; class=&quot;logo&quot;&gt;HildenCo Software&lt;/a&gt;
+  &lt;div class=&quot;desc&quot;&gt;Development, Cloud, Architecture and Open-Source Software&lt;/div&gt;
+&lt;/div&gt;
+
+ &lt;div class=&quot;alignright&quot;&gt;
+  &lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt; 
+  &lt;a href=&quot;/p/contribute.html&quot;&gt;Contribute&lt;/a&gt; 
+  &lt;a href=&quot;/p/about.html&quot;&gt;About Me&lt;/a&gt; 
+  &lt;a href=&quot;/p/contact.html&quot;&gt;Contact&lt;/a&gt;
+  &lt;a href=&quot;//twitter.com/brunohilden&quot; target=&quot;_blank&quot;&gt;Twitter&lt;/a&gt;
+  &lt;a href=&quot;https://blog.hildenco.com/feeds/posts/default&quot; target=&quot;_blank&quot;&gt;RSS&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;</b:widget-setting>
           </b:widget-settings>
           <b:includable id='main'>
-
-  <b:if cond='data:useImage'>
-    <b:if cond='data:imagePlacement == &quot;BEHIND&quot;'>
-      <!--
-      Show image as background to text. You can't really calculate the width
-      reliably in JS because margins are not taken into account by any of
-      clientWidth, offsetWidth or scrollWidth, so we don't force a minimum
-      width if the user is using shrink to fit.
-      This results in a margin-width's worth of pixels being cropped. If the
-      user is not using shrink to fit then we expand the header.
-      -->
-      <b:if cond='data:mobile'>
-        <div id='header-inner'>
-          <div class='titlewrapper' style='background: transparent'>
-            <div class='title' style='background: transparent; border-width: 0px'>
-              <b:include name='title'/>
-            </div>
-          </div>
-          <b:include name='description'/>
-        </div>
-      <b:else/>
-        <div expr:style='&quot;background-image: url(\&quot;&quot; + data:sourceUrl + &quot;\&quot;); &quot;                      + &quot;background-position: &quot;                      + data:backgroundPositionStyleStr + &quot;; &quot;                      + data:widthStyleStr                      + &quot;min-height: &quot; + data:height                      + &quot;_height: &quot; + data:height                      + &quot;background-repeat: no-repeat; &quot;' id='header-inner'>
-          <div class='titlewrapper' style='background: transparent'>
-            <div class='title' style='background: transparent; border-width: 0px'>
-              <b:include name='title'/>
-            </div>
-          </div>
-          <b:include name='description'/>
-        </div>
-      </b:if>
-    <b:else/>
-      <!--Show the image only-->
-      <div id='header-inner'>
-        <a expr:href='data:blog.homepageUrl' style='display: block'>
-          <img expr:alt='data:title' expr:height='data:height' expr:id='data:widget.instanceId + &quot;_headerimg&quot;' expr:src='data:sourceUrl' expr:width='data:width' style='display: block'/>
-        </a>
-        <!--Show the description-->
-        <b:if cond='data:imagePlacement == &quot;BEFORE_DESCRIPTION&quot;'>
-          <b:include name='description'/>
-        </b:if>
-      </div>
-    </b:if>
-  <b:else/>
-    <!--No header image -->
-    <div id='header-inner'>
-      <div class='titlewrapper'>
-        <div class='title'>
-          <b:include name='title'/>
-        </div>
-      </div>
-      <b:include name='description'/>
-    </div>
+  <!-- only display title if it's non-empty -->
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
   </b:if>
-</b:includable>
-          <b:includable id='description'>
-  <div class='descriptionwrapper'>
-    <p class='description'><span><data:description/></span></p>
+  <div class='widget-content'>
+    <data:content/>
   </div>
-</b:includable>
-          <b:includable id='title'>
-  <b:tag cond='data:blog.url != data:blog.homepageUrl' expr:href='data:blog.homepageUrl' name='a'>
-    <data:title/>
-  </b:tag>
+
+  <b:include name='quickedit'/>
 </b:includable>
         </b:widget>
       </b:section>
@@ -1322,7 +1407,7 @@ head.appendChild(script);
             <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
             <b:widget-setting name='style.textcolor'>#333333</b:widget-setting>
             <b:widget-setting name='style.layout'>1x1</b:widget-setting>
-            <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
+            <b:widget-setting name='style.bordercolor'>#2288bb</b:widget-setting>
             <b:widget-setting name='style.urlcolor'>#666666</b:widget-setting>
             <b:widget-setting name='style.linkcolor'>#2288bb</b:widget-setting>
             <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
@@ -2355,7 +2440,7 @@ Software Engineer and open-source enthusiast.&lt;br /&gt;
         <div class='column-right-inner'>
           <aside>
           <macro:include id='main-column-right-sections' name='sections'>
-            <macro:param default='2' name='num' value='0'/>
+            <macro:param default='2' name='num' value='1'/>
             <macro:param default='sidebar-right' name='idPrefix'/>
             <macro:param default='sidebar' name='class'/>
             <macro:param default='true' name='includeBottom'/>
@@ -2396,23 +2481,6 @@ Software Engineer and open-source enthusiast.&lt;br /&gt;
       </macro:include>
       <!-- outside of the include in order to lock Attribution widget -->
       <b:section class='foot' id='footer-3' name='Footer' showaddelement='no'>
-        <b:widget id='AdSense3' locked='false' title='' type='AdSense'>
-          <b:widget-settings>
-            <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
-            <b:widget-setting name='style.textcolor'>#333333</b:widget-setting>
-            <b:widget-setting name='style.layout'>1x1</b:widget-setting>
-            <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
-            <b:widget-setting name='style.urlcolor'>#2288bb</b:widget-setting>
-            <b:widget-setting name='style.linkcolor'>#222222</b:widget-setting>
-            <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
-          </b:widget-settings>
-          <b:includable id='main'>
-  <div class='widget-content'>
-    <data:adCode/>
-    <b:include name='quickedit'/>
-  </div>
-</b:includable>
-        </b:widget>
         <b:widget id='HTML5' locked='false' mobile='yes' title='' type='HTML'>
           <b:widget-settings>
             <b:widget-setting name='content'><![CDATA[Is this website helpful to you? Please consider subscribing, sharing posts and <a href="https://twitter.com/brunohilden" target="_blank">sending your feedback</a>. Thanks!]]></b:widget-setting>
@@ -2529,8 +2597,80 @@ Software Engineer and open-source enthusiast.&lt;br /&gt;
   </macro:if>
 </macro:includable>
 
-<b:section-contents id='footer-1'>
-  <b:widget id='AdSense1' locked='false' title='' type='AdSense'>
+<b:section-contents id='sidebar-right-1'>
+  <b:widget id='BlogSearch1' locked='false' mobile='yes' title='Search' type='BlogSearch'>
+    <b:includable id='main'>
+    <!-- only display title if it's non-empty -->
+    <b:if cond='data:title != &quot;&quot;'>
+      <h2 class='title'><data:title/></h2>
+    </b:if>
+
+    <div class='widget-content'>
+      <div expr:id='data:widget.instanceId + &quot;_form&quot;'>
+        <form class='gsc-search-box' expr:action='data:blog.searchUrl'>
+          <b:attr cond='not data:view.isPreview' name='target' value='_top'/>
+          <table cellpadding='0' cellspacing='0' class='gsc-search-box'>
+            <tbody>
+              <tr>
+                <td class='gsc-input'>
+                  <input autocomplete='off' class='gsc-input' expr:value='data:view.isSearch ? data:view.search.query.escaped : &quot;&quot;' name='q' size='10' title='search' type='text'/>
+                </td>
+                <td class='gsc-search-button'>
+                  <input class='gsc-search-button' expr:value='data:messages.search' title='search' type='submit'/>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </form>
+      </div>
+    </div>
+
+    <b:include name='quickedit'/>
+  </b:includable>
+  </b:widget>
+  <b:widget id='FollowByEmail1' locked='false' mobile='yes' title='Follow by Email' type='FollowByEmail' version='1'>
+    <b:includable id='main'>
+  <b:if cond='data:title != &quot;&quot;'><h2 class='title'><data:title/></h2></b:if>
+  <div class='widget-content'>
+    <div class='follow-by-email-inner'>
+      <form action='https://feedburner.google.com/fb/a/mailverify' expr:onsubmit='&quot;window.open(\&quot;https://feedburner.google.com/fb/a/mailverify?uri=&quot; + data:feedPath + &quot;\&quot;, \&quot;popupwindow\&quot;, \&quot;scrollbars=yes,width=550,height=520\&quot;); return true&quot;' method='post' target='popupwindow'>
+        <table>
+          <tr>
+            <td>
+              <input class='follow-by-email-address' name='email' placeholder='Email address...' type='text'/>
+            </td>
+            <td>
+              <input class='follow-by-email-submit' type='submit' value='Submit'/>
+            </td>
+          </tr>
+        </table>
+        <input expr:value='data:feedPath' name='uri' type='hidden'/>
+        <input name='loc' type='hidden' value='en_US'/>
+      </form>
+    </div>
+  </div>
+  <span class='item-control blog-admin'>
+    <b:include name='quickedit'/>
+  </span>
+</b:includable>
+  </b:widget>
+  <b:widget id='HTML3' locked='false' title='' type='HTML'>
+    <b:widget-settings>
+      <b:widget-setting name='content'><![CDATA[<div class="sharethis-inline-follow-buttons"></div>]]></b:widget-setting>
+    </b:widget-settings>
+    <b:includable id='main'>
+  <!-- only display title if it's non-empty -->
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
+  </b:if>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+
+  <b:include name='quickedit'/>
+</b:includable>
+  </b:widget>
+  <b:widget id='AdSense2' locked='false' title='' type='AdSense'>
     <b:widget-settings>
       <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
       <b:widget-setting name='style.textcolor'>#333333</b:widget-setting>
@@ -2547,6 +2687,86 @@ Software Engineer and open-source enthusiast.&lt;br /&gt;
   </div>
 </b:includable>
   </b:widget>
+  <b:widget id='HTML2' locked='false' title='' type='HTML'>
+    <b:widget-settings>
+      <b:widget-setting name='content'><![CDATA[<a class="twitter-timeline" data-width="500" data-height="300" data-tweet-limit="3" data-chrome="noheader nofooter noborders" href="https://twitter.com/brunohilden?ref_src=twsrc%5Etfw"></a> <script async="async" src="https://platform.twitter.com/widgets.js" charset="utf-8" ></script>]]></b:widget-setting>
+    </b:widget-settings>
+    <b:includable id='main'>
+  <!-- only display title if it's non-empty -->
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
+  </b:if>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+
+  <b:include name='quickedit'/>
+</b:includable>
+  </b:widget>
+  <b:widget id='AdSense3' locked='false' title='' type='AdSense'>
+    <b:widget-settings>
+      <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
+      <b:widget-setting name='style.textcolor'>#333333</b:widget-setting>
+      <b:widget-setting name='style.layout'>1x1</b:widget-setting>
+      <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
+      <b:widget-setting name='style.urlcolor'>#2288bb</b:widget-setting>
+      <b:widget-setting name='style.linkcolor'>#222222</b:widget-setting>
+      <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
+    </b:widget-settings>
+    <b:includable id='main'>
+  <div class='widget-content'>
+    <data:adCode/>
+    <b:include name='quickedit'/>
+  </div>
+</b:includable>
+  </b:widget>
+  <b:widget id='Label2' locked='false' mobile='yes' title='Other Topics' type='Label'>
+    <b:widget-settings>
+      <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
+      <b:widget-setting name='display'>CLOUD</b:widget-setting>
+      <b:widget-setting name='selectedLabelsList'>.Net,.Net Core,Architecture,Asp.Net,Azure,Best Practices,Books,Bootstrap,C#,Career,Certifications,Cloud,Containers,Databases,Design Patterns,Development,Docker,FOSS,Fedora,Firefox,GitHub,Golang,Google,Google Cloud,Hacks,Javascript,Kubernetes,Linux,MVC,MassTransit,Microservices,Microsoft,MongoDB,NServiceBus,NoSql,Open Source,Powershell,Python,QA,RabbitMQ,Raspberry Pi,RavenDB,React,Red Hat,Redis,Security,Startups,Ubuntu,Vim,Vue.js,WSL,Web,Windows,backend,centOS,devops,front-end,i3,jQuery</b:widget-setting>
+      <b:widget-setting name='showType'>USER_SELECTED</b:widget-setting>
+      <b:widget-setting name='showFreqNumbers'>true</b:widget-setting>
+    </b:widget-settings>
+    <b:includable id='main'>
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2><data:title/></h2>
+  </b:if>
+  <div expr:class='&quot;widget-content &quot; + data:display + &quot;-label-widget-content&quot;'>
+    <b:if cond='data:display == &quot;list&quot;'>
+      <ul>
+        <b:loop values='data:labels' var='label'>
+          <li>
+            <b:if cond='data:blog.url == data:label.url'>
+              <span expr:dir='data:blog.languageDirection'><data:label.name/></span>
+            <b:else/>
+              <a expr:dir='data:blog.languageDirection' expr:href='data:label.url'><data:label.name/></a>
+            </b:if>
+            <b:if cond='data:showFreqNumbers'>
+              <span dir='ltr'>(<data:label.count/>)</span>
+            </b:if>
+          </li>
+        </b:loop>
+      </ul>
+    <b:else/>
+      <b:loop values='data:labels' var='label'>
+        <span expr:class='&quot;label-size label-size-&quot; + data:label.cssSize'>
+          <b:if cond='data:blog.url == data:label.url'>
+            <span expr:dir='data:blog.languageDirection'><data:label.name/></span>
+          <b:else/>
+            <a expr:dir='data:blog.languageDirection' expr:href='data:label.url'><data:label.name/></a>
+          </b:if>
+          <b:if cond='data:showFreqNumbers'>
+            <span class='label-count' dir='ltr'>(<data:label.count/>)</span>
+          </b:if>
+        </span>
+      </b:loop>
+    </b:if>
+    <b:include name='quickedit'/>
+  </div>
+</b:includable>
+  </b:widget>
+</b:section-contents><b:section-contents id='footer-1'>
   <b:widget id='FeaturedPost1' locked='false' mobile='yes' title='Featured this Week' type='FeaturedPost'>
     <b:widget-settings>
       <b:widget-setting name='showSnippet'>true</b:widget-setting>
@@ -2584,6 +2804,23 @@ Software Engineer and open-source enthusiast.&lt;br /&gt;
       width: 100%;
     }
   </style>
+</b:includable>
+  </b:widget>
+  <b:widget id='AdSense1' locked='false' title='' type='AdSense'>
+    <b:widget-settings>
+      <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
+      <b:widget-setting name='style.textcolor'>#333333</b:widget-setting>
+      <b:widget-setting name='style.layout'>1x1</b:widget-setting>
+      <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
+      <b:widget-setting name='style.urlcolor'>#2288bb</b:widget-setting>
+      <b:widget-setting name='style.linkcolor'>#222222</b:widget-setting>
+      <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
+    </b:widget-settings>
+    <b:includable id='main'>
+  <div class='widget-content'>
+    <data:adCode/>
+    <b:include name='quickedit'/>
+  </div>
 </b:includable>
   </b:widget>
 </b:section-contents><b:section-contents id='footer-2-1'>
@@ -2635,23 +2872,6 @@ Software Engineer and open-source enthusiast.&lt;br /&gt;
   </div>
 </b:includable>
   </b:widget>
-  <b:widget id='HTML2' locked='false' title='' type='HTML'>
-    <b:widget-settings>
-      <b:widget-setting name='content'>&lt;h2&gt;Recent Tweets&lt;/h2&gt;
-&lt;a class=&quot;twitter-timeline&quot; data-width=&quot;500&quot; data-height=&quot;300&quot; data-tweet-limit=&quot;2&quot; data-chrome=&quot;noheader nofooter noborders&quot; href=&quot;https://twitter.com/brunohilden?ref_src=twsrc%5Etfw&quot;&gt;&lt;/a&gt; &lt;script async=&quot;async&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot; &gt;&lt;/script&gt;</b:widget-setting>
-    </b:widget-settings>
-    <b:includable id='main'>
-  <!-- only display title if it's non-empty -->
-  <b:if cond='data:title != &quot;&quot;'>
-    <h2 class='title'><data:title/></h2>
-  </b:if>
-  <div class='widget-content'>
-    <data:content/>
-  </div>
-
-  <b:include name='quickedit'/>
-</b:includable>
-  </b:widget>
 </b:section-contents><b:section-contents id='footer-2-2'>
   <b:widget id='PopularPosts2' locked='false' mobile='yes' title='Popular this week' type='PopularPosts'>
     <b:widget-settings>
@@ -2700,124 +2920,5 @@ Software Engineer and open-source enthusiast.&lt;br /&gt;
     <b:include name='quickedit'/>
   </div>
 </b:includable>
-  </b:widget>
-  <b:widget id='AdSense2' locked='false' title='' type='AdSense'>
-    <b:widget-settings>
-      <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
-      <b:widget-setting name='style.textcolor'>#333333</b:widget-setting>
-      <b:widget-setting name='style.layout'>1x1</b:widget-setting>
-      <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
-      <b:widget-setting name='style.urlcolor'>#2288bb</b:widget-setting>
-      <b:widget-setting name='style.linkcolor'>#222222</b:widget-setting>
-      <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
-    </b:widget-settings>
-    <b:includable id='main'>
-  <div class='widget-content'>
-    <data:adCode/>
-    <b:include name='quickedit'/>
-  </div>
-</b:includable>
-  </b:widget>
-  <b:widget id='FollowByEmail1' locked='false' title='Follow by Email' type='FollowByEmail'>
-    <b:includable id='main'>
-  <b:if cond='data:title != &quot;&quot;'><h2 class='title'><data:title/></h2></b:if>
-  <div class='widget-content'>
-    <div class='follow-by-email-inner'>
-      <form action='https://feedburner.google.com/fb/a/mailverify' expr:onsubmit='&quot;window.open(\&quot;https://feedburner.google.com/fb/a/mailverify?uri=&quot; + data:feedPath + &quot;\&quot;, \&quot;popupwindow\&quot;, \&quot;scrollbars=yes,width=550,height=520\&quot;); return true&quot;' method='post' target='popupwindow'>
-        <table width='100%'>
-          <tr>
-            <td>
-              <input class='follow-by-email-address' name='email' placeholder='Email address...' type='text'/>
-            </td>
-            <td width='64px'>
-              <input class='follow-by-email-submit' type='submit' value='Submit'/>
-            </td>
-          </tr>
-        </table>
-        <input expr:value='data:feedPath' name='uri' type='hidden'/>
-        <input name='loc' type='hidden' value='en_US'/>
-      </form>
-    </div>
-  </div>
-  <span class='item-control blog-admin'>
-    <b:include name='quickedit'/>
-  </span>
-</b:includable>
-  </b:widget>
-  <b:widget id='Label2' locked='false' mobile='yes' title='Other Topics' type='Label'>
-    <b:widget-settings>
-      <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
-      <b:widget-setting name='display'>CLOUD</b:widget-setting>
-      <b:widget-setting name='selectedLabelsList'>.Net,.Net Core,AWS,AppInsights,Architecture,Asp.Net,Azure,Best Practices,Books,Bootstrap,C#,Career,Certifications,Cloud,Containers,Databases,Dependency Injection,Design Patterns,Development,Docker,FOSS,Fedora,Firefox,GitHub,Golang,Google,Google Cloud,Hacks,IoT,Javascript,Kubernetes,Linux,MVC,MassTransit,Microservices,Microsoft,MongoDB,NServiceBus,NoSql,Open Source,Powershell,Privacy,Python,QA,RabbitMQ,Raspberry Pi,RavenDB,React,Red Hat,Redis,Reference,Rust,Security,Selenium,Startups,Ubuntu,Vim,Vue.js,WSL,Web,Windows,backend,centOS,devops,front-end,i3,jQuery</b:widget-setting>
-      <b:widget-setting name='showType'>USER_SELECTED</b:widget-setting>
-      <b:widget-setting name='showFreqNumbers'>true</b:widget-setting>
-    </b:widget-settings>
-    <b:includable id='main'>
-  <b:if cond='data:title != &quot;&quot;'>
-    <h2><data:title/></h2>
-  </b:if>
-  <div expr:class='&quot;widget-content &quot; + data:display + &quot;-label-widget-content&quot;'>
-    <b:if cond='data:display == &quot;list&quot;'>
-      <ul>
-        <b:loop values='data:labels' var='label'>
-          <li>
-            <b:if cond='data:blog.url == data:label.url'>
-              <span expr:dir='data:blog.languageDirection'><data:label.name/></span>
-            <b:else/>
-              <a expr:dir='data:blog.languageDirection' expr:href='data:label.url'><data:label.name/></a>
-            </b:if>
-            <b:if cond='data:showFreqNumbers'>
-              <span dir='ltr'>(<data:label.count/>)</span>
-            </b:if>
-          </li>
-        </b:loop>
-      </ul>
-    <b:else/>
-      <b:loop values='data:labels' var='label'>
-        <span expr:class='&quot;label-size label-size-&quot; + data:label.cssSize'>
-          <b:if cond='data:blog.url == data:label.url'>
-            <span expr:dir='data:blog.languageDirection'><data:label.name/></span>
-          <b:else/>
-            <a expr:dir='data:blog.languageDirection' expr:href='data:label.url'><data:label.name/></a>
-          </b:if>
-          <b:if cond='data:showFreqNumbers'>
-            <span class='label-count' dir='ltr'>(<data:label.count/>)</span>
-          </b:if>
-        </span>
-      </b:loop>
-    </b:if>
-    <b:include name='quickedit'/>
-  </div>
-</b:includable>
-  </b:widget>
-  <b:widget id='BlogSearch1' locked='false' title='Search' type='BlogSearch'>
-    <b:includable id='main'>
-    <!-- only display title if it's non-empty -->
-    <b:if cond='data:title != &quot;&quot;'>
-      <h2 class='title'><data:title/></h2>
-    </b:if>
-
-    <div class='widget-content'>
-      <div expr:id='data:widget.instanceId + &quot;_form&quot;'>
-        <form class='gsc-search-box' expr:action='data:blog.searchUrl'>
-          <b:attr cond='not data:view.isPreview' name='target' value='_top'/>
-          <table cellpadding='0' cellspacing='0' class='gsc-search-box'>
-            <tbody>
-              <tr>
-                <td class='gsc-input'>
-                  <input autocomplete='off' class='gsc-input' expr:value='data:view.isSearch ? data:view.search.query.escaped : &quot;&quot;' name='q' size='10' title='search' type='text'/>
-                </td>
-                <td class='gsc-search-button'>
-                  <input class='gsc-search-button' expr:value='data:messages.search' title='search' type='submit'/>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </form>
-      </div>
-    </div>
-
-    <b:include name='quickedit'/>
-  </b:includable>
   </b:widget>
 </b:section-contents></html>

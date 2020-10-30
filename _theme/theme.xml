@@ -774,12 +774,13 @@ blockquote {
 
 #l4u-header .alignright a{
   color: #e3e3e3;
-  padding-left: .5rem;
+  padding-left: .8rem;
+  font-size: 1em;
 }
 
 .mobile #l4u-header .alignright a {
   color: #1E273D;
-  padding-left: .1em;
+  padding-left: .5em;
 }
 
 #l4u-header .logo {
@@ -1169,6 +1170,14 @@ table.section-columns {
   font-weight: 600;
 }
 
+.rss {
+  background-color: #f57c00;
+  color: #white;
+  display: inline-block;
+  padding: 0 .8em;
+  margin-left: .8em;
+}
+
 ]]></b:skin>
     <b:template-skin>
       <b:variable default='960px' name='content.width' type='length' value='1100px'/>
@@ -1362,12 +1371,11 @@ head.appendChild(script);
 &lt;/div&gt;
 
  &lt;div class=&quot;alignright&quot;&gt;
-  &lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt; 
   &lt;a href=&quot;/p/contribute.html&quot;&gt;Contribute&lt;/a&gt; 
   &lt;a href=&quot;/p/about.html&quot;&gt;About Me&lt;/a&gt; 
   &lt;a href=&quot;/p/contact.html&quot;&gt;Contact&lt;/a&gt;
   &lt;a href=&quot;//twitter.com/brunohilden&quot; target=&quot;_blank&quot;&gt;Twitter&lt;/a&gt;
-  &lt;a href=&quot;https://blog.hildenco.com/feeds/posts/default&quot; target=&quot;_blank&quot;&gt;RSS&lt;/a&gt;
+  &lt;a href=&quot;https://blog.hildenco.com/feeds/posts/default&quot; target=&quot;_blank&quot; class=&quot;rss&quot;&gt;RSS&lt;/a&gt;
 &lt;/div&gt;
 &lt;/div&gt;</b:widget-setting>
           </b:widget-settings>
@@ -2370,7 +2378,7 @@ head.appendChild(script);
             </b:widget>
             <b:widget id='HTML1' locked='false' mobile='yes' title='' type='HTML'>
               <b:widget-settings>
-                <b:widget-setting name='content'>&lt;h2&gt;About Me&lt;/h2&gt;
+                <b:widget-setting name='content'>&lt;h2&gt;Connect with me:&lt;/h2&gt;
 &lt;div class=&quot;about-me&quot;&gt;
 &lt;strong&gt;Bruno Hildenbrand &lt;/strong&gt;&amp;nbsp;
 &lt;a href=&quot;//twitter.com/brunohilden&quot; target=&quot;_blank&quot;&gt;&lt;i class=&quot;fa fa-twitter&quot;&gt;&lt;/i&gt;&lt;/a&gt; &amp;nbsp;
@@ -2508,13 +2516,15 @@ Software Engineer and open-source enthusiast.&lt;br /&gt;
   &lt;a href=&quot;/p/about.html&quot;&gt;About&lt;/a&gt; |
   &lt;a href=&quot;/p/contact.html&quot;&gt;Contact&lt;/a&gt; |
   &lt;a href=&quot;//github.com/hd9&quot; target=&quot;_blank&quot;&gt;GitHub&lt;/a&gt; |
-  &lt;a href=&quot;//twitter.com/brunohilden&quot; target=&quot;_blank&quot;&gt;Twitter&lt;/a&gt; |
-  &lt;a href=&quot;//blog.hildenco.com/feeds/posts/default&quot; target=&quot;_blank&quot;&gt;RSS&lt;/a&gt;
+  &lt;a href=&quot;//twitter.com/brunohilden&quot; target=&quot;_blank&quot;&gt;Twitter&lt;/a&gt;
  &lt;/p&gt;
 
 &lt;p&gt;HildenCo | Development, Cloud, Architecture and Open-Source Software
 &lt;/p&gt;
-&lt;p&gt;2020 &#169; &lt;a href=&quot;//www.hildenco.com&quot; target=&quot;_blank&quot;&gt;HildenCo Software&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;2020 &#169; &lt;a href=&quot;//www.hildenco.com&quot; target=&quot;_blank&quot;&gt;HildenCo Software&lt;/a&gt;
+
+  &lt;a href=&quot;//blog.hildenco.com/feeds/posts/default&quot; target=&quot;_blank&quot; class=&quot;rss&quot;&gt;RSS&lt;/a&gt;
+&lt;/p&gt;
 &lt;p&gt; Made with &#10084; in Canada&lt;/p&gt;
 
 &lt;/div&gt;</b:widget-setting>
@@ -2598,32 +2608,6 @@ Software Engineer and open-source enthusiast.&lt;br /&gt;
 </macro:includable>
 
 <b:section-contents id='sidebar-right-1'>
-  <b:widget id='FollowByEmail2' locked='false' title='Follow by Email' type='FollowByEmail'>
-    <b:includable id='main'>
-  <b:if cond='data:title != &quot;&quot;'><h2 class='title'><data:title/></h2></b:if>
-  <div class='widget-content'>
-    <div class='follow-by-email-inner'>
-      <form action='https://feedburner.google.com/fb/a/mailverify' expr:onsubmit='&quot;window.open(\&quot;https://feedburner.google.com/fb/a/mailverify?uri=&quot; + data:feedPath + &quot;\&quot;, \&quot;popupwindow\&quot;, \&quot;scrollbars=yes,width=550,height=520\&quot;); return true&quot;' method='post' target='popupwindow'>
-        <table width='100%'>
-          <tr>
-            <td>
-              <input class='follow-by-email-address' name='email' placeholder='Email address...' type='text'/>
-            </td>
-            <td width='64px'>
-              <input class='follow-by-email-submit' type='submit' value='Submit'/>
-            </td>
-          </tr>
-        </table>
-        <input expr:value='data:feedPath' name='uri' type='hidden'/>
-        <input name='loc' type='hidden' value='en_US'/>
-      </form>
-    </div>
-  </div>
-  <span class='item-control blog-admin'>
-    <b:include name='quickedit'/>
-  </span>
-</b:includable>
-  </b:widget>
   <b:widget id='BlogSearch1' locked='false' mobile='yes' title='Search' type='BlogSearch'>
     <b:includable id='main'>
     <!-- only display title if it's non-empty -->
@@ -2653,6 +2637,32 @@ Software Engineer and open-source enthusiast.&lt;br /&gt;
 
     <b:include name='quickedit'/>
   </b:includable>
+  </b:widget>
+  <b:widget id='FollowByEmail2' locked='false' title='Follow by Email' type='FollowByEmail'>
+    <b:includable id='main'>
+  <b:if cond='data:title != &quot;&quot;'><h2 class='title'><data:title/></h2></b:if>
+  <div class='widget-content'>
+    <div class='follow-by-email-inner'>
+      <form action='https://feedburner.google.com/fb/a/mailverify' expr:onsubmit='&quot;window.open(\&quot;https://feedburner.google.com/fb/a/mailverify?uri=&quot; + data:feedPath + &quot;\&quot;, \&quot;popupwindow\&quot;, \&quot;scrollbars=yes,width=550,height=520\&quot;); return true&quot;' method='post' target='popupwindow'>
+        <table width='100%'>
+          <tr>
+            <td>
+              <input class='follow-by-email-address' name='email' placeholder='Email address...' type='text'/>
+            </td>
+            <td width='64px'>
+              <input class='follow-by-email-submit' type='submit' value='Submit'/>
+            </td>
+          </tr>
+        </table>
+        <input expr:value='data:feedPath' name='uri' type='hidden'/>
+        <input name='loc' type='hidden' value='en_US'/>
+      </form>
+    </div>
+  </div>
+  <span class='item-control blog-admin'>
+    <b:include name='quickedit'/>
+  </span>
+</b:includable>
   </b:widget>
   <b:widget id='HTML3' locked='false' title='' type='HTML'>
     <b:widget-settings>
@@ -2689,10 +2699,10 @@ Software Engineer and open-source enthusiast.&lt;br /&gt;
   </b:widget>
   <b:widget id='PopularPosts3' locked='false' title='Popular this Week' type='PopularPosts'>
     <b:widget-settings>
-      <b:widget-setting name='numItemsToShow'>8</b:widget-setting>
+      <b:widget-setting name='numItemsToShow'>5</b:widget-setting>
       <b:widget-setting name='showThumbnails'>true</b:widget-setting>
       <b:widget-setting name='showSnippets'>true</b:widget-setting>
-      <b:widget-setting name='timeRange'>LAST_WEEK</b:widget-setting>
+      <b:widget-setting name='timeRange'>LAST_MONTH</b:widget-setting>
     </b:widget-settings>
     <b:includable id='main'>
   <b:if cond='data:title != &quot;&quot;'><h2><data:title/></h2></b:if>
@@ -2768,6 +2778,23 @@ Software Engineer and open-source enthusiast.&lt;br /&gt;
   <b:include name='quickedit'/>
 </b:includable>
   </b:widget>
+  <b:widget id='AdSense5' locked='false' title='' type='AdSense'>
+    <b:widget-settings>
+      <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
+      <b:widget-setting name='style.textcolor'>#333333</b:widget-setting>
+      <b:widget-setting name='style.layout'>1x1</b:widget-setting>
+      <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
+      <b:widget-setting name='style.urlcolor'>#2288bb</b:widget-setting>
+      <b:widget-setting name='style.linkcolor'>#222222</b:widget-setting>
+      <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
+    </b:widget-settings>
+    <b:includable id='main'>
+  <div class='widget-content'>
+    <data:adCode/>
+    <b:include name='quickedit'/>
+  </div>
+</b:includable>
+  </b:widget>
   <b:widget id='Label2' locked='false' mobile='yes' title='Other Topics' type='Label'>
     <b:widget-settings>
       <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
@@ -2814,7 +2841,7 @@ Software Engineer and open-source enthusiast.&lt;br /&gt;
   </div>
 </b:includable>
   </b:widget>
-  <b:widget id='AdSense5' locked='false' title='' type='AdSense'>
+  <b:widget id='AdSense6' locked='false' title='' type='AdSense'>
     <b:widget-settings>
       <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
       <b:widget-setting name='style.textcolor'>#333333</b:widget-setting>
@@ -2862,7 +2889,7 @@ Software Engineer and open-source enthusiast.&lt;br /&gt;
     <b:widget-settings>
       <b:widget-setting name='showSnippet'>true</b:widget-setting>
       <b:widget-setting name='showPostTitle'>true</b:widget-setting>
-      <b:widget-setting name='postId'>5802147137200833037</b:widget-setting>
+      <b:widget-setting name='postId'>7128814308829937360</b:widget-setting>
       <b:widget-setting name='showFirstImage'>true</b:widget-setting>
       <b:widget-setting name='useMostRecentPost'>false</b:widget-setting>
     </b:widget-settings>

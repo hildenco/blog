@@ -68,6 +68,10 @@ Windows Subsystem for Linux, the best way to learn Linux on Windows
 #azure #Linux #dotnet #development #aspnet
 https://blog.hildenco.com/2018/11/windows-subsystem-for-linux-best-way-to.html
 
+Want to learn #Linux on #Windows? Learn how you can do that using #WSL
+#dotnet #development #aspnet
+https://blog.hildenco.com/2018/11/windows-subsystem-for-linux-best-way-to.html
+
 How to suppress Application Insights telemetry
 #azure #Linux #dotnet #development #aspnet
 https://blog.hildenco.com/2020/03/how-to-suppress-application-insights.html

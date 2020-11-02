@@ -1,30 +1,34 @@
 # Social
 
-Building and Hosting Docker images on GitHub with GitHub Actions
-#aspnet #dotnet #Azure #docker #github
+Developing #dotnet #web apps? Learn how to implement 
+async request/response to exchange data in microservices using #aspnet, MassTransit, RabbitMQ, Docker and #dotnetcore
+https://blog.hildenco.com/2020/11/async-requestresponse-with-masstransit.html
+
+Learn how to build Docker images on GitHub using GitHub Actions
+#aspnet #dotnet #Azure #docker #github #development
 https://blog.hildenco.com/2020/10/building-and-hosting-docker-images-on.html
 
-Creating ASP.NET Core websites with Docker
-#aspnet #dotnet #Azure #docker #github
+Learn how to create ASP.NET Core websites with Docker
+#aspnet #dotnet #Azure #docker #github #development
 https://blog.hildenco.com/2020/10/how-to-create-aspnet-core-website-with.html
 
-Hosting NuGet packages on GitHub
-#aspnet #dotnet #Azure #docker #github
+Learn how to host your own NuGet packages on GitHub
+#aspnet #dotnet #Azure #docker #github #development
 https://blog.hildenco.com/2020/07/hosting-nuget-packages-on-github.html
 
-Hosting Docker images on GitHub
-#aspnet #dotnet #Azure #docker #github
+Learn how to host your own Docker images on GitHub
+#aspnet #dotnet #Azure #docker #github #development
 https://blog.hildenco.com/2020/09/hosting-docker-images-on-github.html
 
 Send emails from ASP.NET Core websites using SendGrid and Azure 
-#aspnet #dotnet #Azure #docker #github #sendgrid
+#aspnet #dotnet #Azure #docker #github #sendgrid #development
 https://blog.hildenco.com/2020/07/send-emails-from-aspnet-core-websites.html
 
-20 tips to manage Linux VMs on Azure
+Check these 20 tips to manage your Linux VMs on Azure
 #azure #Linux #dotnet #development
 https://blog.hildenco.com/2020/07/20-tips-to-manage-linux-vms-on-azure.html
 
-How to create a CentOS VM on Azure
+Learn how to create your own CentOS VM on Azure
 #azure #Linux #dotnet #development
 https://blog.hildenco.com/2020/07/how-to-create-centos-vm-on-azure.html
 
@@ -35,10 +39,6 @@ https://blog.hildenco.com/2020/06/how-to-create-centos-stream-vm-on-hyper.html
 Why use CentOS
 #azure #Linux #dotnet #development
 https://blog.hildenco.com/2020/06/why-use-centos.html
-
-Why use .NET Core
-#azure #Linux #dotnet #development
-https://blog.hildenco.com/2018/03/exploring-net-core.html
 
 Configuration in .NET Core console applications
 #azure #Linux #dotnet #development #aspnet
@@ -64,12 +64,7 @@ Web Development best practices: tips for stronger passwords
 #azure #Linux #dotnet #development #aspnet
 https://blog.hildenco.com/2018/01/security-tips-for-your-app-case-for.html
 
-Windows Subsystem for Linux, the best way to learn Linux on Windows
-#azure #Linux #dotnet #development #aspnet
-https://blog.hildenco.com/2018/11/windows-subsystem-for-linux-best-way-to.html
-
 Want to learn #Linux on #Windows? Learn how you can do that using #WSL
-#dotnet #development #aspnet
 https://blog.hildenco.com/2018/11/windows-subsystem-for-linux-best-way-to.html
 
 How to suppress Application Insights telemetry
@@ -124,4 +119,6 @@ Testing JavaScript on ASP.NET Core Applications
 #azure #dotnet #development #aspnet
 https://blog.hildenco.com/2018/04/testing-javascript-on-aspnet-core.html
 
-
+Why use .NET Core
+#azure #Linux #dotnet #development
+https://blog.hildenco.com/2018/03/exploring-net-core.html

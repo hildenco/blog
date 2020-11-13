@@ -1,43 +1,44 @@
 # Social
 
-Developing #dotnet #web apps? Learn how to implement 
-async request/response to exchange data in microservices using #aspnet, MassTransit, RabbitMQ, Docker and #dotnetcore
+Building #web apps? Learn how to build async request/response data exchange
+between #microservices using #aspnet, MassTransit, RabbitMQ, #docker
 https://blog.hildenco.com/2020/11/async-requestresponse-with-masstransit.html
 
-Learn how to build Docker images on GitHub using GitHub Actions
-#aspnet #dotnet #Azure #docker #github #development
+Learn how to build #docker images on #github using GitHub Actions
+#aspnet #dotnet #Azure #development
 https://blog.hildenco.com/2020/10/building-and-hosting-docker-images-on.html
 
-Learn how to create ASP.NET Core websites with Docker
-#aspnet #dotnet #Azure #docker #github #development
+Building #aspnet web apps? Learn how to create your web apps using #docker
+#dotnet #Azure #github #development #aws #gcp
 https://blog.hildenco.com/2020/10/how-to-create-aspnet-core-website-with.html
 
-Learn how to host your own NuGet packages on GitHub
-#aspnet #dotnet #Azure #docker #github #development
+Building #aspnet web apps? Learn how to host your own #NuGet packages on #GitHub
+#dotnet #Azure #docker #github #development
 https://blog.hildenco.com/2020/07/hosting-nuget-packages-on-github.html
 
-Learn how to host your own Docker images on GitHub
-#aspnet #dotnet #Azure #docker #github #development
+Learn how to host your own #docker images on #github
+#aspnet #dotnet #Azure #development #aws
 https://blog.hildenco.com/2020/09/hosting-docker-images-on-github.html
 
-Send emails from ASP.NET Core websites using SendGrid and Azure 
-#aspnet #dotnet #Azure #docker #github #sendgrid #development
+Learn how to send emails from your #aspnet web apps using #SendGrid and #Azure 
+and unlock unlock 25,000 free emails each month with their generous plan
+#dotnet #docker #github #development
 https://blog.hildenco.com/2020/07/send-emails-from-aspnet-core-websites.html
 
-Check these 20 tips to manage your Linux VMs on Azure
-#azure #Linux #dotnet #development
+Using #Azure? Check these 20 tips to manage your Linux VMs on Azure
+#Linux #dotnet #development #opensource #foss
 https://blog.hildenco.com/2020/07/20-tips-to-manage-linux-vms-on-azure.html
 
-Learn how to create your own CentOS VM on Azure
-#azure #Linux #dotnet #development
+Using #Azure? Learn how to create your custom CentOS VM on Azure
+#azure #Linux #dotnet #development #opensource #foss
 https://blog.hildenco.com/2020/07/how-to-create-centos-vm-on-azure.html
 
 How to create a CentOS Stream VM on Hyper-V
 #azure #Linux #dotnet #development
 https://blog.hildenco.com/2020/06/how-to-create-centos-stream-vm-on-hyper.html
 
-Why use CentOS
-#azure #Linux #dotnet #development
+Looking for a solid #linux distribution for your servers? Learn why use #CentOS
+#azure #ops #devops #development #aws #gcp
 https://blog.hildenco.com/2020/06/why-use-centos.html
 
 Configuration in .NET Core console applications
@@ -64,19 +65,19 @@ Web Development best practices: tips for stronger passwords
 #azure #Linux #dotnet #development #aspnet
 https://blog.hildenco.com/2018/01/security-tips-for-your-app-case-for.html
 
-Want to learn #Linux on #Windows? Learn how you can do that using #WSL
+Want to learn #Linux on #Windows? Learn how to do that using #WSL
 https://blog.hildenco.com/2018/11/windows-subsystem-for-linux-best-way-to.html
 
-How to suppress Application Insights telemetry
-#azure #Linux #dotnet #development #aspnet
+Learn how to suppress Application Insights telemetry from your #aspnet core website
+#azure #dotnet #development
 https://blog.hildenco.com/2020/03/how-to-suppress-application-insights.html
 
-Adding Application Insights telemetry to your ASP.NET Core website
-#azure #Linux #dotnet #development #aspnet
+Learn how to add Application Insights to your #aspnet Core website
+#azure #dotnet #development #aspnet
 https://blog.hildenco.com/2020/03/adding-application-insights-telemetry.html
 
-Monitor ASP.NET applications using Application Insights and Azure Alerts
-#azure #Linux #dotnet #development #aspnet
+Learn how to monitor your #aspnet apps using Application Insights and #Azure Alerts
+#dotnet #development
 https://blog.hildenco.com/2020/04/monitor-aspnet-applications-using.html
 
 How to profile ASP.NET apps using Application Insights
